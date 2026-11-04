@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "script_watcher"
+version = "1.0.0"
+name = "Script Watcher"
+tagline = "Re-run a Python file or reload an add-on every time you save it in your editor"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Development", "Text Editor"]
+
+[permissions]
+files = "Reads and runs the Python file or add-on folder you choose to watch"
