@@ -80,3 +80,12 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 78 | IK/FK snap for any rig | Rigging | todo |
 | 79 | Walls from edges | Modeling | todo |
 | 80 | 3D print split with connectors | Modeling | todo |
+| 81 | Rig doctor: file-wide broken driver + constraint audit, retarget | Rigging | todo |
+| 82 | GN modifier inputs in the 3D View N-panel, multi-object edit | Geometry Nodes | todo |
+| 83 | Precision edit: exact edge length, angle, distance | Modeling | todo |
+| 84 | Custom property manager (batch add/rename/remove/select) | Object | todo |
+| 85 | Attribute cleanup (color/generic attributes) | Mesh | todo |
+| 86 | Render farm preflight checklist | Render | todo |
+| 87 | HDRI browser with thumbnails | Lighting | todo |
+| 88 | Texture downscaler proxies | Material | todo |
+| 89 | View layer x collection toggle matrix | Scene | todo |
