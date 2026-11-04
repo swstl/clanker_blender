@@ -63,4 +63,4 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 61 | Preferences snapshot / restore | System | todo |
 | 62 | Dimensions overlay | 3D View | todo |
 | 63 | Display toggles pie | 3D View | todo |
-| 64 | Color management quick switch | Render | todo |
+| 64 | Color management quick switch | Render | done (display_pie) |

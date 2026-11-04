@@ -68,6 +68,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Batch Material Edit | Set/multiply/add Principled inputs (roughness, metallic, IOR, alpha, emission…) and backface culling / render method across selected or all materials, skipping texture-linked inputs; sync viewport colors from base color. N > Material. |
 | Render Border from Selection | Fit the render region to selected objects from the camera (with padding), or follow them every frame for animated crops. View > View Regions, Properties > Output. |
 | Turntable | Camera framed on the selection with a seamless 360° loop (camera orbit or objects spin), elevation, margin, lens. Add > Camera > Add Turntable. |
+| Display Pie | Shift+Alt+D in Object Mode: display as bounds/wire/solid/textured, wireframe, in front, name, render visibility, selectable for all selected; view transform switch (AgX/Standard/PBR Neutral/False Color) + exposure reset. |
 
 ## Development
 
