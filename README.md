@@ -69,6 +69,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Render Border from Selection | Fit the render region to selected objects from the camera (with padding), or follow them every frame for animated crops. View > View Regions, Properties > Output. |
 | Turntable | Camera framed on the selection with a seamless 360° loop (camera orbit or objects spin), elevation, margin, lens. Add > Camera > Add Turntable. |
 | Display Pie | Shift+Alt+D in Object Mode: display as bounds/wire/solid/textured, wireframe, in front, name, render visibility, selectable for all selected; view transform switch (AgX/Standard/PBR Neutral/False Color) + exposure reset. |
+| Dimensions Overlay | Live X/Y/Z size of the selection (scene units) and distance between two selected objects drawn in the viewport. Toggle in Viewport Overlays > Objects. |
 
 ## Development
 
