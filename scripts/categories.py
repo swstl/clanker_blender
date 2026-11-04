@@ -3,7 +3,7 @@ CATEGORIES = {
     "Animation": ["Animation Layers", "Key Tweener", "Pose Tools", "Action Manager", "Time Tools",
                   "Mesh Onion Skin", "Motion Trail", "Quick Retarget", "Auto Key Alert", "Shape Key Tools"],
     "Rigging & Weights": ["Weight Layers", "Weight Tools", "Bone Tools"],
-    "Modeling & UV": ["Origin & Align", "Quick Boolean", "Quick Lattice", "Edge Weights Pie", "Mesh Check",
+    "Modeling & UV": ["Origin & Align", "Group Under Empty", "Quick Boolean", "Quick Lattice", "Edge Weights Pie", "Mesh Check",
                       "Select Through", "Modifier Tools", "Apply Modifiers Keep Shape Keys", "UV Tools",
                       "Dimensions Overlay"],
     "Sculpting & Physics": ["Sculpt Masks", "Remesh Tools", "Physics Helpers"],
