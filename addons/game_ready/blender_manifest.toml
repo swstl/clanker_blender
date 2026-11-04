@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "game_ready"
+version = "1.0.0"
+name = "Game Ready"
+tagline = "Collision meshes, LODs, sockets and lightmap UVs for game engines"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Game Engine", "Import-Export"]

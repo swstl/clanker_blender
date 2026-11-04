@@ -65,3 +65,4 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 63 | Display toggles pie | 3D View | todo |
 | 64 | Color management quick switch | Render | done (display_pie) |
 | 65 | 3D cursor history/bookmarks/snap with rotation | 3D View | todo |
+| 66 | Game-ready collision (UCX_), LODs, sockets, lightmap UV | Game Engine | todo |

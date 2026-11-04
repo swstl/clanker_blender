@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (56)
+## Add-ons (57)
 
 ### Animation
 
@@ -100,6 +100,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Add-on | What it does |
 |---|---|
 | Batch Export | Export each object, hierarchy or collection to its own FBX/glTF/OBJ/USD file with Unity/Unreal/Godot presets, origin reset and separate animation files. 3D View > N > Export. |
+| Game Ready | Engine-named collision meshes (Unreal UCX_/UBX_/USP_, Godot -convcolonly, Unity _Collider) from convex hull/box/sphere, _LOD0.._LODn decimated copies, SOCKET_ empties at cursor, non-overlapping lightmap UV. N > Export. |
 | Randomizer | Seeded random materials (per-object slots, shared mesh safe), object colors, scale, rotation, and thin-out selection for many objects. N > Edit. |
 | Scene Cleanup | Merge .001 duplicate materials/node groups/images, remove unused/empty material slots, rename data to object, recursive purge, select objects with bad scale/no material/empty mesh. N > Cleanup. |
 | Collection Tools | Move selection to new collection named after active, isolate/show all, sort A-Z, remove empty, select contents, instance at cursor. Outliner right-click > Collection Tools. |
