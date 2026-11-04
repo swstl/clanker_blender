@@ -44,3 +44,23 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 42 | Shape key L/R split, empty key cleanup | Animation | todo |
 | 43 | Quick lattice around selection | Modeling | todo |
 | 44 | Auto-key on warning | Animation | todo |
+| 45 | VSE ripple delete/trim (5.3 backport for 5.2 LTS) | Sequencer | todo |
+| 46 | Render passes -> File Output node in one click | Compositing | todo |
+| 47 | Sculpt mask <-> vertex group / face set, stored masks | Sculpt | todo |
+| 48 | Batch material edit (Principled inputs on many materials) | Material | todo |
+| 49 | Physics drop / settle objects | Physics | todo |
+| 50 | Global node finder across all node trees | Node | todo |
+| 51 | Paste clipboard image as reference | 3D View | todo |
+| 52 | Render border from selection (animated) | Render | todo |
+| 53 | Turntable setup | Camera | todo |
+| 54 | Quick cloth with pins | Physics | todo |
+| 55 | Node align / straighten reroutes | Node | todo |
+| 56 | Grease Pencil timing tools (GPv3) | Grease Pencil | todo |
+| 57 | Asset catalogs from collections + batch previews | Pipeline | todo |
+| 58 | Keymap conflict finder + cheat sheet export | System | todo |
+| 59 | Script watcher (re-run on save) | Development | todo |
+| 60 | Remesh + reproject sculpt detail | Sculpt | todo |
+| 61 | Preferences snapshot / restore | System | todo |
+| 62 | Dimensions overlay | 3D View | todo |
+| 63 | Display toggles pie | 3D View | todo |
+| 64 | Color management quick switch | Render | todo |

@@ -64,6 +64,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | UV Tools | Seams by angle/sharp, batch unwrap selected objects with equal texel density, texel density measure/set/copy, checker material toggle (restores originals), straighten to grid, select flipped, UV map sync across objects. UV Editor N > UV Tools. |
 | Motion Trail | Editable motion paths for objects and pose bones: drag keys in the viewport, Ctrl+click path to add a key, X to delete; fading trail with frame ticks. N > Animation. |
 | Auto Key Alert | Red frame + 'AUTO KEY' label in every 3D viewport while auto keying is on (color/thickness in prefs). |
+| Bake Helper | One-click Cycles PBR baking (color, roughness, metallic, normal, AO, emission, ORM...) per object, atlas or high-to-low, auto image nodes + full restore, baked material. N > Bake or Properties > Render. |
 
 ## Development
 
