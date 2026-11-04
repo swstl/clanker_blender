@@ -21,7 +21,9 @@ def test_typewriter_chars():
     sc, ob, cu = _text("Hello world")
     s = cu.text_animator
     s.start, s.speed = 1, 10
+    sc.render.use_lock_interface = False
     s.typewriter = True  # captures body as source
+    assert sc.render.use_lock_interface  # frame handler edits text during renders
     assert s.source == "Hello world"
     sc.frame_set(13)  # 0.5 s * 10 cps
     assert cu.body == "Hello", cu.body

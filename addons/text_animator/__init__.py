@@ -43,7 +43,7 @@ def _fcurve(id_data, path):
 def refresh(cu, frame, fps):
     """Rewrite the body of one TextCurve for `frame`. No-op unless a feature is enabled."""
     s = cu.text_animator
-    if cu.is_editmode or not (s.typewriter or s.counter):
+    if cu.is_editmode or not cu.is_editable or not (s.typewriter or s.counter):
         return
     if s.counter:
         fc = _fcurve(cu, "text_animator.value")
@@ -65,6 +65,8 @@ def on_frame(scene, depsgraph=None):
 
 def _upd(self, context):
     sc = context.scene
+    if self.typewriter or self.counter:  # frame handlers edit text during renders: crashes without the lock
+        sc.render.use_lock_interface = True
     refresh(self.id_data, sc.frame_current_final, sc.render.fps / sc.render.fps_base)
 
 

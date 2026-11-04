@@ -166,6 +166,9 @@ class CM_PT_panel(bpy.types.Panel):
 
 def _res_update(self, context):
     sc = context.scene
+    if self.cm_use_resolution:
+        # Marker camera switches change resolution from a frame handler, also while rendering.
+        sc.render.use_lock_interface = True
     if sc.camera and sc.camera.data == self and self.cm_use_resolution:
         apply_camera(sc, sc.camera)
 

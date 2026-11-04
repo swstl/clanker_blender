@@ -62,12 +62,17 @@ def apply_tabs():
         ids = {c.__name__ for c in changed} | {getattr(c, "bl_parent_id", "") for c in changed}
         group = [c for c in panels if c.__name__ in ids or getattr(c, "bl_parent_id", "") in ids]
         _reregister(group, lambda c: target_category(_original[c], prefs))
+    # Panels of add-ons disabled meanwhile keep their class: re-enabling registers it as is.
+    for c in _original.keys() - set(panels):
+        c.bl_category = target_category(_original[c], prefs)
     return len(changed)
 
 
 def restore_tabs():
     panels = [c for c in clanker_panels() if c in _original]
     _reregister(panels, lambda c: _original[c])
+    for c, cat in _original.items():  # also classes of add-ons disabled meanwhile
+        c.bl_category = cat
     _original.clear()
 
 
@@ -149,7 +154,7 @@ def register():
     for c in _classes:
         bpy.utils.register_class(c)
     # Other Clanker add-ons may register after this one at startup: apply once everything loaded.
-    bpy.app.timers.register(_deferred, first_interval=1.0)
+    bpy.app.timers.register(_deferred, first_interval=1.0, persistent=True)
 
 
 def unregister():

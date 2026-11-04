@@ -90,6 +90,8 @@ class RB_OT_follow_selected(bpy.types.Operator):
             coll.objects.link(ob)  # extra link only, objects stay where they are
         s = context.scene.render_border_follow
         s.collection, s.enabled = coll, True
+        # The follow handler edits render settings per frame, also during animation renders.
+        context.scene.render.use_lock_interface = True
         follow(context.scene)
         return {'FINISHED'}
 

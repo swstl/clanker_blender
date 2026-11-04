@@ -117,3 +117,27 @@ def test_draw_with_modifier():
         sc.gn_panel_pinned_only = pinned
         gp.GNP_PT_panel.draw(drawcheck._Self(gp.GNP_PT_panel), drawcheck.Ctx(active_object=a))
     sc.gn_panel_pinned_only = False
+
+
+def test_auto_sync_pushes_only_edits():
+    """Edit All Selected: selecting objects must not overwrite them; an edit pushes only that input."""
+    ng, ids, (a, b, c) = _setup()
+    sc = bpy.context.scene
+    gp.set_value(b.modifiers["GN"], ids["Count"], 9)
+    sc.gn_panel_auto_sync = True
+    try:
+        gp._snap.clear()
+        gp._sync_timer()  # first run (sync just enabled / new active): snapshot only
+        assert getattr(b.modifiers["GN"].properties.inputs, ids["Count"]).value == 9
+        gp.set_value(a.modifiers["GN"], ids["Lift"], 4.0)
+        gp._sync_timer()
+        for ob in (b, c):
+            ins = ob.modifiers["GN"].properties.inputs
+            assert getattr(ins, ids["Lift"]).value == 4.0
+        assert getattr(b.modifiers["GN"].properties.inputs, ids["Count"]).value == 9  # untouched
+        bpy.context.view_layer.objects.active = b  # switching active pushes nothing
+        gp._sync_timer()
+        assert getattr(a.modifiers["GN"].properties.inputs, ids["Count"]).value == 3
+    finally:
+        sc.gn_panel_auto_sync = False
+        gp._snap.clear()

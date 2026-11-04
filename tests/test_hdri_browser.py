@@ -99,7 +99,9 @@ def test_apply_and_switch():
 def test_render_swap():
     _setup()
     scene = bpy.context.scene
+    scene.render.use_lock_interface = False
     env = M.apply_entry(bpy.context, "foo")
+    assert scene.render.use_lock_interface  # render-thread swap needs the locked UI
     view = env.image.filepath
     assert view.endswith("foo_1k.hdr") and env[M.RENDER_KEY].endswith("foo_4k.exr")
     M._render_pre(scene)

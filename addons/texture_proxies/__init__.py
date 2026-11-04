@@ -150,6 +150,8 @@ class TP_OT_proxies(bpy.types.Operator):
     def execute(self, context):
         s = context.scene.texture_proxies
         n, saved = use_proxies(target_materials(context, s.scope), int(s.max_size))
+        if n and s.full_res_render:  # render handlers swap images from the render thread: needs the lock
+            context.scene.render.use_lock_interface = True
         self.report({'INFO'}, f"{n} textures on proxies, ~{saved / 2**20:.0f} MB less")
         return {'FINISHED'}
 

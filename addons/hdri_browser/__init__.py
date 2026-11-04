@@ -72,7 +72,7 @@ def refresh():
         else:
             _queue.append(name)
     if _queue and not bpy.app.timers.is_registered(_thumb_timer):
-        bpy.app.timers.register(_thumb_timer, first_interval=0.1)
+        bpy.app.timers.register(_thumb_timer, first_interval=0.1, persistent=True)
 
 
 # --- thumbnails --------------------------------------------------------------
@@ -206,7 +206,10 @@ def apply_entry(context, name):
     p = _prefs()
     view = pick(files, p.resolution)
     render = pick(files, 'HIGHEST') if p.lowres_viewport else view
-    return apply_hdri(scene.world, view, render)
+    env = apply_hdri(scene.world, view, render)
+    if RENDER_KEY in env:  # render handlers swap the image from the render thread: unsafe unless locked
+        scene.render.use_lock_interface = True
+    return env
 
 
 def _env(scene):
@@ -441,7 +444,7 @@ def register():
                                                             description="Show only starred HDRIs")
     for lst, fn in _handlers:
         lst.append(fn)
-    bpy.app.timers.register(_initial_scan, first_interval=0.5)
+    bpy.app.timers.register(_initial_scan, first_interval=0.5, persistent=True)  # survive `blender file.blend`
 
 
 def unregister():

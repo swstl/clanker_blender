@@ -107,11 +107,41 @@ def _nodes_mods(ob):
 
 # ---------------------------------------------------------------- auto sync
 
+_snap = {}  # last seen inputs of the active object: {"ob": name, "vals": {(modifier, identifier): values}}
+
+
+def _values(ob):
+    out = {}
+    for md in _nodes_mods(ob):
+        for ident in shown_identifiers(md.node_group, False) if md.node_group else ():
+            inp = _input(md, ident)
+            if inp is not None:
+                out[md.name, ident] = tuple(_plain(getattr(inp, p)) for p in ("value", "type", "attribute_name")
+                                            if p in inp.bl_rna.properties)
+    return out
+
+
 def _sync_timer():
+    """Push only the inputs that changed on the active object since the last run, so selecting
+    objects (or switching the active one) never overwrites their values."""
     ctx = bpy.context
-    if getattr(ctx.scene, "gn_panel_auto_sync", False) and ctx.view_layer:
+    if not (getattr(ctx.scene, "gn_panel_auto_sync", False) and ctx.view_layer):
+        _snap.clear()
+        return None
+    act = ctx.view_layer.objects.active
+    name, vals = (act.name if act else None), _values(act)
+    prev = _snap.get("vals") if _snap.get("ob") == name else None
+    _snap.update(ob=name, vals=vals)
+    if not prev:
+        return None
+    changed = {}
+    for (mod, ident), v in vals.items():
+        if prev.get((mod, ident)) != v:
+            changed.setdefault(mod, []).append(ident)
+    if changed:
         sel = [o for o in ctx.scene.objects if o.select_get()]
-        sync_selected(ctx.view_layer.objects.active, sel)
+        for mod, idents in changed.items():
+            copy_to_objects(act.modifiers[mod], sel, idents)
     return None
 
 
