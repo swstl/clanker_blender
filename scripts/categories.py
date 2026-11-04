@@ -1,8 +1,8 @@
 """Add-on name -> README category. Used to keep the README list grouped."""
 CATEGORIES = {
-    "Animation": ["Animation Layers", "Key Tweener", "Stepped Preview", "Pose Tools", "Action Manager", "Time Tools",
+    "Animation": ["Animation Layers", "Key Tweener", "Stepped Preview", "Playblast", "Space Switch", "Pose Tools", "Action Manager", "Time Tools",
                   "Mesh Onion Skin", "Motion Trail", "Quick Retarget", "Auto Key Alert", "Shape Key Tools"],
-    "Rigging & Weights": ["Weight Layers", "Weight Tools", "Bone Tools"],
+    "Rigging & Weights": ["Weight Layers", "Weight Tools", "Bone Tools", "Tension Map", "IK/FK Snap"],
     "Modeling & UV": ["Origin & Align", "Group Under Empty", "Quick Boolean", "Quick Lattice", "Edge Weights Pie", "Mesh Check",
                       "Select Through", "Modifier Tools", "Apply Modifiers Keep Shape Keys", "UV Tools",
                       "Dimensions Overlay"],

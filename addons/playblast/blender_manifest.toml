@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "playblast"
+version = "1.0.0"
+name = "Playblast"
+tagline = "Viewport preview videos with burn-ins, render settings untouched"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Animation", "Render"]
+
+[permissions]
+files = "Writes preview videos into a playblasts folder"
