@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "action_manager"
+version = "1.0.0"
+name = "Action Manager"
+tagline = "List, switch, protect and organize the actions of a rig"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.4.0"
+tags = ["Animation"]
