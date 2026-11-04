@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "bone_tools"
+version = "1.0.0"
+name = "Bone Tools"
+tagline = "Rigging chores: side naming, bone chains, roll, deform checks"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
+tags = ["Rigging", "Animation"]
