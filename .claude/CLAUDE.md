@@ -9,3 +9,6 @@ straight to `main`.
 
 ## Project memory
 - .claude/notes/preferences.md: how the user wants work done here
+- .claude/notes/errors.md: fixed errors and gotchas
+- docs/ADDON_GUIDE.md: add-on conventions + Blender 5.x API gotchas
+- docs/IDEAS.md: backlog of QoL ideas with status

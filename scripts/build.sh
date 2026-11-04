@@ -6,6 +6,6 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 BLENDER="${BLENDER:-$(command -v blender || echo "$HOME/.local/share/Steam/steamapps/common/Blender/blender")}"
 mkdir -p "$ROOT/dist"
 for d in "$ROOT"/addons/*/; do
-  "$BLENDER" --factory-startup --command extension build --source-dir "$d" --output-dir "$ROOT/dist"
+  "$BLENDER" --background --factory-startup --command extension build --source-dir "$d" --output-dir "$ROOT/dist"
 done
-"$BLENDER" --factory-startup --command extension server-generate --repo-dir "$ROOT/dist"
+"$BLENDER" --background --factory-startup --command extension server-generate --repo-dir "$ROOT/dist"
