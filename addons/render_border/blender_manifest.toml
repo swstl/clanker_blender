@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "render_border"
+version = "1.0.0"
+name = "Render Border from Selection"
+tagline = "Fit the render region to selected objects and optionally follow them while animating"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Render", "Camera"]
