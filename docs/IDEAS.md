@@ -36,7 +36,7 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 32 | Collection tools | Scene | todo |
 | 33 | Missing/external files manager | Files | todo |
 | 34 | Project folder bootstrap + output paths | Files | todo |
-| 35 | Render presets draft/preview/final | Render | todo |
+| 35 | Render presets draft/preview/final | Render | done (render_queue) |
 | 36 | Camera manager | Camera | done (camera_manager) |
 | 39 | Heavy object finder / viewport stats | Scene | done (heavy_finder) |
 | 40 | Operator history panel | UI | todo |

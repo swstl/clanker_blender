@@ -42,3 +42,11 @@
 - Native already (don't duplicate): batch rename (Ctrl+F2), Copy Global Transform, pose library,
   breakdowner/blend-to-neighbor, Gaussian smooth, bone collections, Collection Exporters (4.2),
   Save Incremental (Ctrl+Alt+S), recursive purge.
+- Some operators ignore `temp_override(object=...)` and act only on the real view-layer
+  selection (e.g. `vertex_group_clean`, `vertex_group_limit_total`,
+  `material_slot_remove_unused`); they silently return FINISHED. Check results or implement directly.
+- `FILE_PATH`/`DIR_PATH` string props: add `options={'PATH_SUPPORTS_BLEND_RELATIVE'}` for `//` paths (5.2).
+- Brush weight (5.x): `tool_settings.weight_paint.unified_paint_settings.weight`.
+- `view_layer.objects` can be stale right after linking objects: call `view_layer.update()`.
+- Exporter "selected only" flags differ: FBX/glTF `use_selection`, OBJ `export_selected_objects`,
+  USD `selected_objects_only`.
