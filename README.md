@@ -37,6 +37,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Batch Export | Export each object, hierarchy or collection to its own FBX/glTF/OBJ/USD file with Unity/Unreal/Godot presets, origin reset and separate animation files. 3D View > N > Export. |
 | Weight Layers | Non-destructive weight painting layers per vertex group (Mix/Add/Subtract/Multiply/Max/Min, opacity, toggle), auto-composite, flatten, mirror layer. Properties > Data, or N > Weights in Weight Paint. |
 | Weight Tools | Mirror all L/R vertex groups, remove empty/non-bone groups, one-click game-ready cleanup (clean, limit 4, normalize), select unweighted/over-influenced verts, brush weight presets. N > Weights. |
+| Origin & Align | Set origins to any bounding-box point, cursor, selection (from Edit Mode) or face normal without moving geometry; align, distribute, drop to floor, stack. N > Align, or Alt+Shift+O pie. |
 
 ## Development
 
