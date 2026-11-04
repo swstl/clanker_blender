@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "gn_panel"
+version = "1.0.0"
+name = "GN Panel"
+tagline = "Edit Geometry Nodes modifier inputs from the 3D View sidebar"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "5.2.0"
+tags = ["Geometry Nodes", "3D View", "User Interface"]
