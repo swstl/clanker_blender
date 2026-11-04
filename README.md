@@ -52,6 +52,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Modifier Tools | Copy whole stack to selected, toggle viewport/render by type, apply all but Armature, remove by type, fix stack order, find objects by modifier type, Weighted Normal / Smooth by Angle quick add. Properties > Modifiers. |
 | Texture Auto Reload | Watches image files and reloads them when saved in Photoshop/Krita/Substance; never discards unsaved paint. Image > Auto Reload. |
 | Bone Tools | Fix L/R bone naming (vertex groups follow), strip prefixes like mixamorig:, bone chains from edge paths or curves, roll to cursor, numbered subdivide, deform/skinning checks, rig-to-rig Copy Transforms and bake. N > Rig. |
+| Shape Key Tools | Split a shape key into .L/.R with a soft center blend (halves sum to original), remove empty keys, reset all values. Shape key specials menu. |
 
 ## Development
 

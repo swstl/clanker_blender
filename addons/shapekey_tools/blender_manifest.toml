@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "shapekey_tools"
+version = "1.0.0"
+name = "Shape Key Tools"
+tagline = "Split shape keys into left and right halves, clean empty keys, reset all values"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Mesh", "Animation"]
