@@ -32,6 +32,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Time Tools | Insert/remove frames at the playhead (keys, NLA, markers), change FPS keeping timing, snap subframe keys. Dope Sheet / Graph Editor > Key menu. |
 | Heavy Object Finder | Ranks visible objects by triangles after modifiers; one-click bounds/wire display or heavy modifiers off in viewport. 3D View > N > View. |
 | Version Snapshots | Timed timestamped backups in `_versions/` next to the .blend, keep last N, named milestones, restore from 3D View > N > View. |
+| Camera Manager | All cameras in one list, one-click switch/look-through, next/prev, per-camera resolution (portrait + landscape in one file), bind to marker, camera from view. 3D View > N > View. |
 
 ## Development
 
