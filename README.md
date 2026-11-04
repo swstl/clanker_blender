@@ -25,7 +25,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (78)
+## Add-ons (79)
 
 ### Animation
 
@@ -61,6 +61,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Add-on | What it does |
 |---|---|
 | Origin & Align | Set origins to any bounding-box point, cursor, selection (from Edit Mode) or face normal without moving geometry; align, distribute, drop to floor, stack. N > Align, or Alt+Shift+O pie. |
+| Precision Edit | CAD-style exact values in Edit Mode: set edge length, vertex distance, angle between edges, scale selection to an edge length, move active vertex to XYZ; live world-space readouts. N > Edit. |
 | Group Under Empty | Maya-style transform groups: Ctrl+Alt+P parents the selection under an empty (bottom/center/cursor/active pivot, keeps world transforms and nested hierarchies), Shift+Alt+P ungroups, select whole group. Object > Parent. |
 | Curve Tools | Live Geometry Nodes objects-along-curve (count/spacing/corners, upright/tangent, random pick, jitter, realize) and sagging cables between objects or verts with hooks, end caps and bundles. N > Edit, Add > Curve. |
 | GN Panel | Edit Geometry Nodes modifier inputs from the 3D View sidebar (live, with group panels), pin the inputs you use, reset to default, copy or auto-sync inputs to selected objects (opt-in: overwrites them). N > GN. |
