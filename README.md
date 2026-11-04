@@ -25,7 +25,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (74)
+## Add-ons (75)
 
 ### Animation
 
@@ -101,6 +101,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 |---|---|
 | Render Queue | Queue render jobs (per camera/marker, overrides, path tokens), render in background Blender processes or export a shell script; Draft/Preview/Final presets. Properties > Output. |
 | Product Stage | One click: curved cyclorama backdrop, key/fill/rim area lights (power scales with size) and a framed camera around the selection; optional shadow catcher; rebuild or remove. N > Light. |
+| View Layer Matrix | Collections × view layers grid to toggle exclude/holdout/indirect/hide for every layer without switching, copy one layer's state to another, one view layer per top-level collection. Properties > View Layer. |
 | Render Notify | Desktop notification + sound when a render finishes (or is cancelled). |
 | Render Passes to Files | One click wires every enabled render pass (AOVs, Cryptomatte) per view layer to a multilayer EXR or per-pass files, re-run safe, optional denoise, pass toggle grid. Properties > View Layer. |
 | Render Border from Selection | Fit the render region to selected objects from the camera (with padding), or follow them every frame for animated crops. View > View Regions, Properties > Output. |
