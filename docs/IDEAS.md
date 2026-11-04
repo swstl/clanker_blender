@@ -6,7 +6,7 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | # | Idea | Area | Status |
 |---|------|------|--------|
 | 1 | Animation layers (NLA wrapper, layer stack UI) | Animation | wip (anim_layers) |
-| 2 | Weight paint layers (non-destructive) | Rigging | wip (weight_layers) |
+| 2 | Weight paint layers (non-destructive) | Rigging | done (weight_layers) |
 | 3 | Weight toolkit: mirror all, remove empty groups, clean+limit+normalize for games, copy weight to selection | Rigging | todo |
 | 4 | Batch game exporter (per object/collection, origin reset, engine presets, prefixes) | Export | todo |
 | 5 | Apply modifiers on meshes with shape keys | Modeling | todo |
