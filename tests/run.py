@@ -29,6 +29,23 @@ def clean():
         bpy.data.collections.remove(c)
 
 
+def check_manifest(addon_id):
+    """Rules Blender enforces at build/install time (not when loading from a repo folder)."""
+    import tomllib
+    with open(os.path.join(ADDONS, addon_id, "blender_manifest.toml"), "rb") as f:
+        m = tomllib.load(f)
+    errs = []
+    texts = [("tagline", m.get("tagline", ""))] + [(f"permissions.{k}", v) for k, v in m.get("permissions", {}).items()]
+    for key, val in texts:
+        if len(val) > 64:
+            errs.append(f"{key} longer than 64 chars ({len(val)})")
+        if val and val[-1] in ".,;:!?":
+            errs.append(f"{key} ends with punctuation")
+    if m.get("id") != addon_id:
+        errs.append("id does not match folder name")
+    return errs
+
+
 def main():
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
     ids = argv or sorted(d for d in os.listdir(ADDONS)
@@ -48,6 +65,9 @@ def main():
             failures += 1
             print(f"FAIL enable {addon_id}\n{traceback.format_exc()}")
             continue
+        for err in check_manifest(addon_id):
+            failures += 1
+            print(f"FAIL {addon_id} manifest: {err}")
         clean()
         for err in drawcheck.check_module(mod):
             failures += 1

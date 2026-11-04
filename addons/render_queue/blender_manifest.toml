@@ -10,4 +10,4 @@ blender_version_min = "4.2.0"
 tags = ["Render", "Pipeline"]
 
 [permissions]
-files = "Saves a temp copy of the file, writes logs and scripts, runs Blender subprocesses"
+files = "Saves a temp copy of the file and writes render logs and scripts"

@@ -10,4 +10,4 @@ blender_version_min = "4.2.0"
 tags = ["Render"]
 
 [permissions]
-files = "Runs the system notification command (notify-send / osascript / PowerShell)"
+files = "Runs the system notification command"
