@@ -48,6 +48,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Animation Layers | Layer stack on top of NLA: add/remove/reorder layers, mute, solo, lock, influence (keyable), blend mode; click a layer to key into it with upper layers still visible; merge down, bake to base. N > Animation (3D View, Graph, Dope Sheet). |
 | Mesh Onion Skin | Ghosts past/future poses of animated meshes (or a rig's meshes) every N frames or at keyframes, colored and faded, auto-updating. N > Animation. |
 | Quick Boolean | Ctrl+Numpad -/+/*// = Difference/Union/Intersect/Slice; cutters become wire, render-hidden, parented and collected in 'Cutters'; apply all + delete cutters. Object > Quick Boolean. |
+| Key Tweener | AnimAide-style keyframe sliders: tween, blend to neighbor, ease, push/pull, scale average, blend to default, smooth, time offset. Drag or click presets. N > Animation. |
 
 ## Development
 
