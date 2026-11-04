@@ -11,13 +11,16 @@ def _clean():
         bpy.data.hair_curves.remove(c)
 
 
-def _hair(roots, n_pts=3, height=0.6):
-    """Grid surface + a hair object with straight curves standing on `roots` (z=0)."""
+def _hair(roots, n_pts=3, height=0.6, location=(0, 0, 0)):
+    """Grid surface + a hair object with straight curves standing on `roots` (z=0), both at `location`
+    (explicit: primitive ops otherwise follow the 3D cursor that earlier tests move)."""
     _clean()
-    bpy.ops.mesh.primitive_grid_add(size=4, x_subdivisions=8, y_subdivisions=8)
+    bpy.ops.mesh.primitive_grid_add(size=4, x_subdivisions=8, y_subdivisions=8, location=location,
+                                    rotation=(0, 0, 0))
     surf = bpy.context.active_object
     c = bpy.data.hair_curves.new("Hair")
     ob = bpy.data.objects.new("Hair", c)
+    ob.location = location
     bpy.context.scene.collection.objects.link(ob)
     c.surface = surf
     c.surface_uv_map = surf.data.uv_layers[0].name
@@ -56,6 +59,13 @@ def test_mirror_x():
     assert len(c.curves) == 6
     bpy.ops.hair_tools.mirror(axis='X', dedupe=False)
     assert len(c.curves) == 12
+
+
+def test_mirror_moved_surface():
+    # mirror plane is the surface's local X, not the world origin
+    ob = _hair([(1.0, 0.25)], location=(3, 0, 1))
+    bpy.ops.hair_tools.mirror(axis='X')
+    assert np.allclose(_roots(ob.data)[1], (-1, 0.25, 0), atol=1e-3)
 
 
 def test_mirror_replace_side():

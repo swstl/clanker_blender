@@ -28,6 +28,10 @@ def clean():
             coll.remove(item)
     for c in list(bpy.data.collections):
         bpy.data.collections.remove(c)
+    cur = bpy.context.scene.cursor  # primitives spawn at the cursor; earlier tests move it
+    cur.location = (0, 0, 0)
+    cur.rotation_euler = (0, 0, 0)
+    cur.rotation_quaternion = (1, 0, 0, 0)
 
 
 def check_manifest(addon_id):
