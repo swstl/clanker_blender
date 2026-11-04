@@ -71,6 +71,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Display Pie | Shift+Alt+D in Object Mode: display as bounds/wire/solid/textured, wireframe, in front, name, render visibility, selectable for all selected; view transform switch (AgX/Standard/PBR Neutral/False Color) + exposure reset. |
 | Dimensions Overlay | Live X/Y/Z size of the selection (scene units) and distance between two selected objects drawn in the viewport. Toggle in Viewport Overlays > Objects. |
 | Script Watcher | Watch a .py file (re-run on save) or an add-on folder (disable, purge modules, re-enable on save); shows last result/error. Text Editor N > Text. |
+| Render Passes to Files | One click wires every enabled render pass (AOVs, Cryptomatte) per view layer to a multilayer EXR or per-pass files, re-run safe, optional denoise, pass toggle grid. Properties > View Layer. |
 
 ## Development
 

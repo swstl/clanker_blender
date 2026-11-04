@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "pass_output"
+version = "1.0.0"
+name = "Render Passes to Files"
+tagline = "Wire every render pass to File Output nodes in one click"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
+tags = ["Render", "Compositing", "Node"]
