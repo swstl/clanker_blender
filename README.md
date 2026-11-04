@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (54)
+## Add-ons (55)
 
 ### Animation
 
@@ -121,6 +121,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Add-on | What it does |
 |---|---|
 | VSE Tools | Ripple delete (Shift+Delete), ripple trim to playhead (Alt+[ / Alt+]), insert/remove gap, batch blend/opacity/volume, frame-rate check, channel mute — 5.3-style ripple editing for 5.2 LTS. Sequencer Strip > Ripple. |
+| GP Timing | Grease Pencil v3 timing: exposure on 1s–4s with ripple, insert/remove holds, retime keys, jump between keys on all layers, solo/lock layer navigator. Dope Sheet N > Timing. |
 
 ### System & Development
 

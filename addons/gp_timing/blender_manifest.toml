@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "gp_timing"
+version = "1.0.0"
+name = "GP Timing"
+tagline = "Exposure, ripple holds, retiming and layers for Grease Pencil"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.3.0"
+tags = ["Grease Pencil", "Animation"]
