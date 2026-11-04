@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (58)
+## Add-ons (59)
 
 ### Animation
 
@@ -108,6 +108,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Project Files | External files report (missing in red), collect outside files into textures/ sounds/ … with relative paths, one-click project folders + render output path. File > Project Files. |
 | Version Snapshots | Timed timestamped backups in `_versions/` next to the .blend, keep last N, named milestones, restore from 3D View > N > View. |
 | Asset Helper | Collections → asset catalogs (merges cats file, keeps UUIDs), batch mark/clear objects/materials/node groups/actions with tags, studio-lit custom previews, register folder as asset library. N > Assets. |
+| Paste Reference | Ctrl+Shift+V pastes a clipboard image as a view-aligned reference empty, image plane or camera background (saved to //references/); load image files as references side by side; reference list with opacity/lock. Object Mode. |
 
 ### Viewport & UI
 

@@ -1,0 +1,14 @@
+schema_version = "1.0.0"
+id = "paste_reference"
+version = "1.0.0"
+name = "Paste Reference"
+tagline = "Paste clipboard images as reference empties, planes or camera BG"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["3D View", "Object"]
+
+[permissions]
+files = "Save pasted images next to the .blend and load image files"
+clipboard = "Read images from the system clipboard"
