@@ -153,7 +153,7 @@ class QB_Prefs(bpy.types.AddonPreferences):
     bl_idname = __package__
 
     def draw(self, context):
-        self.layout.label(text="Object Mode: Ctrl+Numpad Minus/Plus/Asterisk/Slash = Difference/Union/Intersect/Slice")
+        self.layout.label(text="Object Mode: Ctrl+Shift+Numpad Minus/Plus/Asterisk/Slash = Difference/Union/Intersect/Slice")
         self.layout.label(text="Change or disable in Keymap > Object Mode")
 
 
@@ -170,7 +170,7 @@ def register():
         km = kc.keymaps.new(name="Object Mode", space_type='EMPTY')
         for key, op in (('NUMPAD_MINUS', 'DIFFERENCE'), ('NUMPAD_PLUS', 'UNION'),
                         ('NUMPAD_ASTERIX', 'INTERSECT'), ('NUMPAD_SLASH', 'SLICE')):
-            kmi = km.keymap_items.new("quick_boolean.apply_op", key, 'PRESS', ctrl=True)
+            kmi = km.keymap_items.new("quick_boolean.apply_op", key, 'PRESS', ctrl=True, shift=True)
             kmi.properties.operation = op
             _keymaps.append((km, kmi))
 

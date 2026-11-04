@@ -1,6 +1,6 @@
 schema_version = "1.0.0"
 id = "quick_boolean"
-version = "1.0.0"
+version = "1.0.1"
 name = "Quick Boolean"
 tagline = "One-key non-destructive booleans with tidy cutter objects"
 maintainer = "swstl"

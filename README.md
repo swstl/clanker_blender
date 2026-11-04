@@ -61,7 +61,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Origin & Align | Set origins to any bounding-box point, cursor, selection (from Edit Mode) or face normal without moving geometry; align, distribute, drop to floor, stack. N > Align, or Alt+Shift+O pie. |
 | Group Under Empty | Maya-style transform groups: Ctrl+Alt+P parents the selection under an empty (bottom/center/cursor/active pivot, keeps world transforms and nested hierarchies), Shift+Alt+P ungroups, select whole group. Object > Parent. |
 | Curve Tools | Live Geometry Nodes objects-along-curve (count/spacing/corners, upright/tangent, random pick, jitter, realize) and sagging cables between objects or verts with hooks, end caps and bundles. N > Edit, Add > Curve. |
-| Quick Boolean | Ctrl+Numpad -/+/*// = Difference/Union/Intersect/Slice; cutters become wire, render-hidden, parented and collected in 'Cutters'; apply all + delete cutters. Object > Quick Boolean. |
+| Quick Boolean | Ctrl+Shift+Numpad -/+/*// = Difference/Union/Intersect/Slice; cutters become wire, render-hidden, parented and collected in 'Cutters'; apply all + delete cutters. Object > Quick Boolean. |
 | Quick Lattice | Fit a lattice around selected objects or Edit Mode vertices (auto vertex group), edit it, then apply-and-delete or remove. Right-click menu. |
 | Edge Weights Pie | Ctrl+Alt+E pie in Edit Mesh: exact bevel weight / crease values (0.25–1), mark/clear sharp and seam, bevel+sharp combo. |
 | Mesh Check | Counts n-gons, tris, non-manifold, loose geometry, zero-area faces, overlapping verts, flipped normals and poles; one click to select or fix each. N > Edit. |
