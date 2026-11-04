@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "paint_saver"
+version = "1.0.0"
+name = "Paint Saver"
+tagline = "Never lose texture paint: saves images with the file, backups"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Paint", "System"]
+
+[permissions]
+files = "Saves painted images and recovery copies next to the blend file"

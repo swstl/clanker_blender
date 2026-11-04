@@ -25,7 +25,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (83)
+## Add-ons (84)
 
 ### Animation
 
@@ -90,6 +90,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 
 | Add-on | What it does |
 |---|---|
+| Paint Saver | Ctrl+S also saves painted images (new ones to //textures/ or packed), timed recovery copies in //paint_recovery/, red 'N unsaved images' button in the 3D View/Image Editor header. |
 | Texture Set Loader | Pick a folder or files of PBR textures and build one Principled material per set (ORM packing, DirectX normals, displacement, box projection, assign or mark as asset). File > Import. |
 | Image Palette | k-means main colors of any image → Palette (set for paint modes), optional swatch materials, hex codes copied to clipboard. Image Editor N > Image. |
 | Texture Proxies | Downscaled copies (256–2048 px, saved to //proxies/) of large textures for a fast viewport, with memory readout; originals swapped back automatically for every render; one click to restore. N > View. |
