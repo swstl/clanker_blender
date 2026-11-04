@@ -11,7 +11,7 @@ CATEGORIES = {
                              "Texture Auto Reload", "Node Finder", "Node Tidy"],
     "Rendering & Cameras": ["Render Queue", "Render Preflight", "HDRI Browser", "Light Link Matrix", "Product Stage", "View Layer Matrix", "Render Notify", "Render Passes to Files", "Render Border from Selection",
                             "Camera Manager", "Light Manager", "Turntable"],
-    "Scene, Files & Export": ["Batch Export", "Batch Import", "Game Ready", "Randomizer", "Attribute Cleanup", "Scene Cleanup", "Collection Tools", "Project Files",
+    "Scene, Files & Export": ["Batch Export", "Export Preflight", "Batch Import", "Game Ready", "Randomizer", "Attribute Cleanup", "Scene Cleanup", "Collection Tools", "Project Files",
                               "Version Snapshots", "Asset Helper", "Paste Reference"],
     "Viewport & UI": ["Clanker Hub", "Object Selection Sets", "Saved Views", "Cursor Tools", "Display Pie", "Pie Builder", "Heavy Object Finder"],
     "Video, 2D & Motion Graphics": ["VSE Tools", "GP Timing", "Text Animator"],

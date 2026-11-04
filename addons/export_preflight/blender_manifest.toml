@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "export_preflight"
+version = "1.0.0"
+name = "Export Preflight"
+tagline = "Check models against Unity, Unreal or Godot rules before export"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
+tags = ["Import-Export", "Game Engine"]
+
+[permissions]
+clipboard = "Copies the preflight report as text"
