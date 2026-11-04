@@ -49,6 +49,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Mesh Onion Skin | Ghosts past/future poses of animated meshes (or a rig's meshes) every N frames or at keyframes, colored and faded, auto-updating. N > Animation. |
 | Quick Boolean | Ctrl+Numpad -/+/*// = Difference/Union/Intersect/Slice; cutters become wire, render-hidden, parented and collected in 'Cutters'; apply all + delete cutters. Object > Quick Boolean. |
 | Key Tweener | AnimAide-style keyframe sliders: tween, blend to neighbor, ease, push/pull, scale average, blend to default, smooth, time offset. Drag or click presets. N > Animation. |
+| Modifier Tools | Copy whole stack to selected, toggle viewport/render by type, apply all but Armature, remove by type, fix stack order, find objects by modifier type, Weighted Normal / Smooth by Angle quick add. Properties > Modifiers. |
 
 ## Development
 

@@ -57,3 +57,4 @@
 - `Action.is_empty` is False once a slot exists: check keys directly.
 - `ShaderNodeMix.inputs["A"]` returns the hidden float socket; use identifiers like `A_Color`.
 - gpu drawing can be tested headless with `gpu.init()` + a bound `GPUOffScreen`.
+- Geometry-nodes modifier inputs (5.2): `md.properties.inputs.<socket id>.value`, not IDProperties.
