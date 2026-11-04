@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "light_link_matrix"
+version = "1.0.0"
+name = "Light Link Matrix"
+tagline = "Lights x objects grid for light and shadow linking at a glance"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Lighting", "Render"]

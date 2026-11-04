@@ -25,7 +25,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (84)
+## Add-ons (85)
 
 ### Animation
 
@@ -108,6 +108,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Render Queue | Queue render jobs (per camera/marker, overrides, path tokens), render in background Blender processes or export a shell script; Draft/Preview/Final presets. Properties > Output. |
 | Render Preflight | One-click checklist before rendering locally or on a farm: saved file, relative/missing paths, output and format, camera, unbaked sims/GN bakes, Python drivers, add-on nodes, engine settings; fix buttons and a copyable report. Properties > Output. |
 | HDRI Browser | Thumbnail browser for your HDRI folders (grouped by resolution, search, favorites, prev/next); one click sets the world HDRI keeping strength/rotation; low-res in viewport, full-res swapped in for render. N > Light. |
+| Light Link Matrix | Lights × objects grid for native light and shadow linking: click a cell to cycle Default / Include / Exclude, selected-only filter, clear linking. N > Light. |
 | Product Stage | One click: curved cyclorama backdrop, key/fill/rim area lights (power scales with size) and a framed camera around the selection; optional shadow catcher; rebuild or remove. N > Light. |
 | View Layer Matrix | Collections × view layers grid to toggle exclude/holdout/indirect/hide for every layer without switching, copy one layer's state to another, one view layer per top-level collection. Properties > View Layer. |
 | Render Notify | Desktop notification + sound when a render finishes (or is cancelled). |
