@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "batch_import"
+version = "1.0.0"
+name = "Batch Import"
+tagline = "Import a whole folder of FBX, OBJ, glTF, STL, PLY or USD at once"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Import-Export"]
+
+[permissions]
+files = "Reads the model files in the folder you choose"

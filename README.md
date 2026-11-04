@@ -25,7 +25,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (82)
+## Add-ons (83)
 
 ### Animation
 
@@ -121,6 +121,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Add-on | What it does |
 |---|---|
 | Batch Export | Export each object, hierarchy or collection to its own FBX/glTF/OBJ/USD file with Unity/Unreal/Godot presets, origin reset and separate animation files. 3D View > N > Export. |
+| Batch Import | Import every FBX/OBJ/glTF/STL/PLY/USD/Alembic file in a folder (optionally recursive), one collection per file, laid out in a grid on the floor; broken files are skipped and reported. File > Import. |
 | Game Ready | Engine-named collision meshes (Unreal UCX_/UBX_/USP_, Godot -convcolonly, Unity _Collider) from convex hull/box/sphere, _LOD0.._LODn decimated copies, SOCKET_ empties at cursor, non-overlapping lightmap UV. N > Export. |
 | Randomizer | Seeded random materials (per-object slots, shared mesh safe), object colors, scale, rotation, and thin-out selection for many objects. N > Edit. |
 | Attribute Cleanup | List a mesh's attributes with memory size; bulk remove color/generic attributes by name pattern (fixes black imported FBX colors), rename across objects, set active/render color, select objects having an attribute. N > Cleanup. |

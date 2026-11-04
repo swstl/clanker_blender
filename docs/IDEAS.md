@@ -89,3 +89,4 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 87 | HDRI browser with thumbnails | Lighting | todo |
 | 88 | Texture downscaler proxies | Material | todo |
 | 89 | View layer x collection toggle matrix | Scene | todo |
+| 90 | Batch import a folder of models | Import-Export | todo |
