@@ -58,3 +58,4 @@
 - `ShaderNodeMix.inputs["A"]` returns the hidden float socket; use identifiers like `A_Color`.
 - gpu drawing can be tested headless with `gpu.init()` + a bound `GPUOffScreen`.
 - Geometry-nodes modifier inputs (5.2): `md.properties.inputs.<socket id>.value`, not IDProperties.
+- `wm.keyconfigs.default` is empty in `--background`; read default keys via `blender_default.generate_keymaps()` to check conflicts.
