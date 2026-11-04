@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (60)
+## Add-ons (61)
 
 ### Animation
 
@@ -32,6 +32,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 |---|---|
 | Animation Layers | Layer stack on top of NLA: add/remove/reorder layers, mute, solo, lock, influence (keyable), blend mode; click a layer to key into it with upper layers still visible; merge down, bake to base. N > Animation (3D View, Graph, Dope Sheet). |
 | Key Tweener | AnimAide-style keyframe sliders: tween, blend to neighbor, ease, push/pull, scale average, blend to default, smooth, time offset. Drag or click presets. N > Animation. |
+| Stepped Preview | Maya-style stepped playback toggle for blocking: hold each key (originals restored exactly) or sample every N frames via a removable Stepped modifier. Button in Dope Sheet/Graph playback header. |
 | Pose Tools | Paste a pose over a frame range (flipped/additive), mirror animation L↔R with time offset (walk cycles), sparse visual bake (keys only / every N), key whole character, reset incl. custom props, select keyed/constrained. Pose Mode N > Animation. |
 | Action Manager | List all (or compatible) actions, click to assign with right slot + frame range, prev/next/play, auto fake-user on save, range edit, push/stash, batch rename, remove unused. N > Animation. |
 | Time Tools | Insert/remove frames at the playhead (keys, NLA, markers), change FPS keeping timing, snap subframe keys. Dope Sheet / Graph Editor > Key menu. |
