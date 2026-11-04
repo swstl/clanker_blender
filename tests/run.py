@@ -14,12 +14,15 @@ import bpy
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ADDONS = os.path.join(ROOT, "addons")
 TESTS = os.path.join(ROOT, "tests")
+sys.path.insert(0, TESTS)
+import drawcheck  # noqa: E402
 
 
 def clean():
     """Remove all data a test may have created."""
     for coll in (bpy.data.objects, bpy.data.meshes, bpy.data.armatures, bpy.data.actions,
-                 bpy.data.materials, bpy.data.cameras, bpy.data.lights, bpy.data.curves):
+                 bpy.data.materials, bpy.data.cameras, bpy.data.lights, bpy.data.curves,
+                 bpy.data.images, bpy.data.node_groups, bpy.data.lattices):
         for item in list(coll):
             coll.remove(item)
     for c in list(bpy.data.collections):
@@ -45,6 +48,10 @@ def main():
             failures += 1
             print(f"FAIL enable {addon_id}\n{traceback.format_exc()}")
             continue
+        clean()
+        for err in drawcheck.check_module(mod):
+            failures += 1
+            print(f"FAIL {addon_id} draw: {err}")
         path = os.path.join(TESTS, f"test_{addon_id}.py")
         if not os.path.isfile(path):
             print(f"ok   {addon_id} (enabled, no tests)")
