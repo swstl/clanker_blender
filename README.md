@@ -72,6 +72,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Dimensions Overlay | Live X/Y/Z size of the selection (scene units) and distance between two selected objects drawn in the viewport. Toggle in Viewport Overlays > Objects. |
 | Script Watcher | Watch a .py file (re-run on save) or an add-on folder (disable, purge modules, re-enable on save); shows last result/error. Text Editor N > Text. |
 | Render Passes to Files | One click wires every enabled render pass (AOVs, Cryptomatte) per view layer to a multilayer EXR or per-pass files, re-run safe, optional denoise, pass toggle grid. Properties > View Layer. |
+| VSE Tools | Ripple delete (Shift+Delete), ripple trim to playhead (Alt+[ / Alt+]), insert/remove gap, batch blend/opacity/volume, frame-rate check, channel mute — 5.3-style ripple editing for 5.2 LTS. Sequencer Strip > Ripple. |
 
 ## Development
 
