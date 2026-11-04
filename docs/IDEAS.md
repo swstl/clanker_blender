@@ -12,7 +12,7 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 5 | Apply modifiers on meshes with shape keys | Modeling | todo |
 | 6 | Origin tools (bbox points, origin to selection in edit mode, batch) | Modeling | todo |
 | 7 | Align & distribute objects | Modeling | todo |
-| 8 | Timed version snapshots + version browser | Files | todo |
+| 8 | Timed version snapshots + version browser | Files | done (version_snapshots) |
 | 9 | Render queue (cameras/scenes/ranges, overnight) | Render | todo |
 | 10 | Render-done notification | Render | done (render_notify) |
 | 11 | Scene cleanup: merge .001 duplicate materials/images/node groups, unused slots | Scene | todo |

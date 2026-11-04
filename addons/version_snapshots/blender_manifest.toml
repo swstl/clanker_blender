@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "version_snapshots"
+version = "1.0.0"
+name = "Version Snapshots"
+tagline = "Timed versioned backups next to your file with a browser to restore them"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["System", "Pipeline"]
+
+[permissions]
+files = "Writes backup copies of the open blend file into a _versions folder"
