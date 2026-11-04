@@ -9,7 +9,7 @@ CATEGORIES = {
     "Sculpting & Physics": ["Sculpt Masks", "Remesh Tools", "Physics Helpers"],
     "Materials & Textures": ["Texture Set Loader", "Image Palette", "Texture Proxies", "Material Swatches", "Batch Material Edit", "Bake Helper",
                              "Texture Auto Reload", "Node Finder", "Node Tidy"],
-    "Rendering & Cameras": ["Render Queue", "Product Stage", "View Layer Matrix", "Render Notify", "Render Passes to Files", "Render Border from Selection",
+    "Rendering & Cameras": ["Render Queue", "Render Preflight", "Product Stage", "View Layer Matrix", "Render Notify", "Render Passes to Files", "Render Border from Selection",
                             "Camera Manager", "Light Manager", "Turntable"],
     "Scene, Files & Export": ["Batch Export", "Game Ready", "Randomizer", "Attribute Cleanup", "Scene Cleanup", "Collection Tools", "Project Files",
                               "Version Snapshots", "Asset Helper", "Paste Reference"],

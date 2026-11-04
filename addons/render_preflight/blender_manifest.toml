@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "render_preflight"
+version = "1.0.0"
+name = "Render Preflight"
+tagline = "Check if a file is ready to render locally or on a farm"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
+tags = ["Render", "Pipeline"]
+
+[permissions]
+clipboard = "Copies the preflight report as text"
