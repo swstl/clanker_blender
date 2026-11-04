@@ -42,3 +42,4 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 40 | Operator history panel | UI | todo |
 | 41 | Texture auto-reload when edited externally | Material | todo |
 | 42 | Shape key L/R split, empty key cleanup | Animation | todo |
+| 43 | Quick lattice around selection | Modeling | todo |

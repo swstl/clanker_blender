@@ -55,6 +55,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Shape Key Tools | Split a shape key into .L/.R with a soft center blend (halves sum to original), remove empty keys, reset all values. Shape key specials menu. |
 | Quick Retarget | Auto-map bones (Mixamo, Rigify, custom) and bake animation from one armature onto another, A/T-pose aware, root motion scaling, batch all actions, JSON map presets. N > Retarget. |
 | Action Manager | List all (or compatible) actions, click to assign with right slot + frame range, prev/next/play, auto fake-user on save, range edit, push/stash, batch rename, remove unused. N > Animation. |
+| Quick Lattice | Fit a lattice around selected objects or Edit Mode vertices (auto vertex group), edit it, then apply-and-delete or remove. Right-click menu. |
 
 ## Development
 
