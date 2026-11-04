@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "quick_boolean"
+version = "1.0.0"
+name = "Quick Boolean"
+tagline = "One-key non-destructive booleans with tidy cutter objects"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Modeling", "Object"]
