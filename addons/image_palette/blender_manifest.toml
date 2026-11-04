@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "image_palette"
+version = "1.0.0"
+name = "Image Palette"
+tagline = "Extract an image color palette into palettes and materials"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Material", "Paint"]
+
+[permissions]
+clipboard = "Copies the palette as hex codes"
