@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "hdri_browser"
+version = "1.0.0"
+name = "HDRI Browser"
+tagline = "Thumbnail browser for HDRI folders, switch the world in a click"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Lighting", "3D View"]
+
+[permissions]
+files = "Read HDRI folders and write a thumbnail cache"
