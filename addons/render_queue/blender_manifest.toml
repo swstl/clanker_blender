@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "render_queue"
+version = "1.0.0"
+name = "Render Queue"
+tagline = "Queue render jobs per camera or scene and run them in background"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Render", "Pipeline"]
+
+[permissions]
+files = "Saves a temp copy of the file, writes logs and scripts, runs Blender subprocesses"
