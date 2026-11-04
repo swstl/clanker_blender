@@ -21,7 +21,7 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 14 | Mesh onion skinning | Animation | todo |
 | 15 | Editable motion paths | Animation | todo |
 | 16 | Retarget-lite (bone map, constraints, bake) | Animation | todo |
-| 17 | Smart bake helper | Animation | todo |
+| 17 | Smart bake helper | Animation | done (pose_tools) |
 | 18 | Paste pose flipped over range | Animation | todo |
 | 19 | Insert/remove time at playhead, fps rescale | Animation | done (time_tools) |
 | 21 | Bone tools (suffix fix, roll align, chain from verts) | Rigging | todo |

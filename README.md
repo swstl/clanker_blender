@@ -58,6 +58,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Quick Lattice | Fit a lattice around selected objects or Edit Mode vertices (auto vertex group), edit it, then apply-and-delete or remove. Right-click menu. |
 | Select Through | Box/lasso select occluded Edit Mesh verts/edges/faces without X-Ray (Shift+Alt+B / Shift+Alt+L), Shift extend, Ctrl subtract, optional front-faces-only. Select menu. |
 | Material Swatches | Preview grid of all materials with filter; click assigns to selected objects (replace/active slot/add) or Edit Mode faces, select users, new random swatch, distinct random viewport colors. N > Material. |
+| Pose Tools | Paste a pose over a frame range (flipped/additive), mirror animation L↔R with time offset (walk cycles), sparse visual bake (keys only / every N), key whole character, reset incl. custom props, select keyed/constrained. Pose Mode N > Animation. |
 
 ## Development
 
