@@ -60,6 +60,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Material Swatches | Preview grid of all materials with filter; click assigns to selected objects (replace/active slot/add) or Edit Mode faces, select users, new random swatch, distinct random viewport colors. N > Material. |
 | Pose Tools | Paste a pose over a frame range (flipped/additive), mirror animation L↔R with time offset (walk cycles), sparse visual bake (keys only / every N), key whole character, reset incl. custom props, select keyed/constrained. Pose Mode N > Animation. |
 | Saved Views | Viewport bookmarks stored in the .blend: Ctrl+Alt+Shift+1-9 save, Ctrl+Alt+1-9 recall, named list, camera from a saved view. N > View. |
+| Light Manager | All lights + emissive meshes in one list with solo, visibility, color, power; Kelvin presets, aim at cursor/active, place at distance, exposure x0.5/x2, HDRI strength and rotation. N > Light. |
 
 ## Development
 
