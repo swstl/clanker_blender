@@ -70,7 +70,7 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 68 | Playblast with burn-ins, isolated settings | Animation | todo |
 | 69 | Space switch / dynamic parent | Animation | todo |
 | 70 | Stepped preview (blocking toggle) | Animation | todo |
-| 71 | Cable generator | Modeling | todo |
+| 71 | Cable generator | Modeling | done (curve_tools) |
 | 72 | Objects along curve | Modeling | todo |
 | 73 | Palette from image | Material | todo |
 | 74 | Text animator (typewriter, counter, per-letter) | Motion Graphics | todo |
