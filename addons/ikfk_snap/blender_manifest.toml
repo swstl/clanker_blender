@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "ikfk_snap"
+version = "1.0.0"
+name = "IK/FK Snap"
+tagline = "IK/FK snapping and baking for any rig with auto-detected chains"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
+tags = ["Rigging", "Animation"]

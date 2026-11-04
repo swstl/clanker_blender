@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (68)
+## Add-ons (69)
 
 ### Animation
 
@@ -52,6 +52,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Weight Tools | Mirror all L/R vertex groups, remove empty/non-bone groups, one-click game-ready cleanup (clean, limit 4, normalize), select unweighted/over-influenced verts, brush weight presets. N > Weights. |
 | Bone Tools | Fix L/R bone naming (vertex groups follow), strip prefixes like mixamorig:, bone chains from edge paths or curves, roll to cursor, numbered subdivide, deform/skinning checks, rig-to-rig Copy Transforms and bake. N > Rig. |
 | Tension Map | Realtime stretch/compression attributes via Geometry Nodes (render-safe), blue/white/red preview material, bake to stretch/compress vertex groups for wrinkle maps. N > Rig. |
+| IK/FK Snap | Snap FK↔IK on any custom rig (not only Rigify): auto-detect chains from IK constraints, mirror L/R, pole placement, switch property, bake over a frame range. Pose Mode N > Rig. |
 
 ### Modeling & UV
 
