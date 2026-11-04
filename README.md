@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (57)
+## Add-ons (58)
 
 ### Animation
 
@@ -82,6 +82,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Bake Helper | One-click Cycles PBR baking (color, roughness, metallic, normal, AO, emission, ORM...) per object, atlas or high-to-low, auto image nodes + full restore, baked material. N > Bake or Properties > Render. |
 | Texture Auto Reload | Watches image files and reloads them when saved in Photoshop/Krita/Substance; never discards unsaved paint. Image > Auto Reload. |
 | Node Finder | File-wide node search (materials, worlds, GN, compositor, nested groups) with jump-to, where-used, missing images, node group swap and unused-node cleanup. Node Editor N > Find. |
+| Node Tidy | Straighten links, align/distribute, reroute chain straighten/remove/merge, quick pastel frames, grid snap in any node editor. Node > Tidy, N > Node, Shift+Alt+Q pie. |
 
 ### Rendering & Cameras
 

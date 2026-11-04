@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "node_tidy"
+version = "1.0.0"
+name = "Node Tidy"
+tagline = "Straighten links, align, reroute, frame and grid-snap nodes"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
+tags = ["Node", "User Interface"]
