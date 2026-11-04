@@ -42,6 +42,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Apply Modifiers Keep Shape Keys | Apply Subdivision/Mirror/Solidify/Bevel... on meshes with shape keys, keeping key settings and drivers. Object > Apply, or button in Modifiers tab. |
 | Render Queue | Queue render jobs (per camera/marker, overrides, path tokens), render in background Blender processes or export a shell script; Draft/Preview/Final presets. Properties > Output. |
 | Project Files | External files report (missing in red), collect outside files into textures/ sounds/ … with relative paths, one-click project folders + render output path. File > Project Files. |
+| Mesh Check | Counts n-gons, tris, non-manifold, loose geometry, zero-area faces, overlapping verts, flipped normals and poles; one click to select or fix each. N > Edit. |
 
 ## Development
 
