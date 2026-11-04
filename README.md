@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (72)
+## Add-ons (73)
 
 ### Animation
 
@@ -125,6 +125,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 
 | Add-on | What it does |
 |---|---|
+| Clanker Hub | Too many sidebar tabs? Merge every Clanker panel into one tab (default name 'Clanker') or rename tabs one by one; restores originals when switched back. Preferences > Add-ons > Clanker Hub. |
 | Object Selection Sets | Named object selection sets stored in the .blend, across collections: select/select only, assign, remove, hide/show; Select > Selection Sets menu. N > Select. |
 | Saved Views | Viewport bookmarks stored in the .blend: Ctrl+Alt+Shift+1-9 save, Ctrl+Alt+1-9 recall, named list, camera from a saved view. N > View. |
 | Cursor Tools | 3D cursor history (go back to previous position), named cursor bookmarks, cursor to active face/object with rotation, reset rotation. Snap menu (Shift+S) + N > View. |

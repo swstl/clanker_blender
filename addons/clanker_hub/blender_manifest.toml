@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "clanker_hub"
+version = "1.0.0"
+name = "Clanker Hub"
+tagline = "Merge or rename the sidebar tabs of all Clanker QoL add-ons"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["User Interface"]
