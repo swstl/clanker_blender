@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "tension_map"
+version = "1.0.0"
+name = "Tension Map"
+tagline = "Realtime mesh stretch and compression maps via Geometry Nodes"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Geometry Nodes", "Material", "Rigging"]
