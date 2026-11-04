@@ -25,7 +25,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (76)
+## Add-ons (77)
 
 ### Animation
 
@@ -89,6 +89,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 |---|---|
 | Texture Set Loader | Pick a folder or files of PBR textures and build one Principled material per set (ORM packing, DirectX normals, displacement, box projection, assign or mark as asset). File > Import. |
 | Image Palette | k-means main colors of any image → Palette (set for paint modes), optional swatch materials, hex codes copied to clipboard. Image Editor N > Image. |
+| Texture Proxies | Downscaled copies (256–2048 px, saved to //proxies/) of large textures for a fast viewport, with memory readout; originals swapped back automatically for every render; one click to restore. N > View. |
 | Material Swatches | Preview grid of all materials with filter; click assigns to selected objects (replace/active slot/add) or Edit Mode faces, select users, new random swatch, distinct random viewport colors. N > Material. |
 | Batch Material Edit | Set/multiply/add Principled inputs (roughness, metallic, IOR, alpha, emission…) and backface culling / render method across selected or all materials, skipping texture-linked inputs; sync viewport colors from base color. N > Material. |
 | Bake Helper | One-click Cycles PBR baking (color, roughness, metallic, normal, AO, emission, ORM...) per object, atlas or high-to-low, auto image nodes + full restore, baked material. N > Bake or Properties > Render. |

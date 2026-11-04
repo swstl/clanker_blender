@@ -7,7 +7,7 @@ CATEGORIES = {
                       "Select Through", "Modifier Tools", "Apply Modifiers Keep Shape Keys", "UV Tools",
                       "Dimensions Overlay"],
     "Sculpting & Physics": ["Sculpt Masks", "Remesh Tools", "Physics Helpers"],
-    "Materials & Textures": ["Texture Set Loader", "Image Palette", "Material Swatches", "Batch Material Edit", "Bake Helper",
+    "Materials & Textures": ["Texture Set Loader", "Image Palette", "Texture Proxies", "Material Swatches", "Batch Material Edit", "Bake Helper",
                              "Texture Auto Reload", "Node Finder", "Node Tidy"],
     "Rendering & Cameras": ["Render Queue", "Product Stage", "View Layer Matrix", "Render Notify", "Render Passes to Files", "Render Border from Selection",
                             "Camera Manager", "Light Manager", "Turntable"],
