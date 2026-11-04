@@ -193,9 +193,12 @@ def on_depsgraph(scene, depsgraph):
         return
     names = {t[0] for t in _state["targets"]}
     if any(isinstance(u.id, bpy.types.Action) or (isinstance(u.id, bpy.types.Object)
-                                                  and u.id.name in names and u.is_updated_transform)
+                                                  and u.id.name in names and u.is_updated_transform
+                                                  and not key_frames(u.id.original))
            for u in depsgraph.updates):
-        _state["dirty"] = True  # keys edited / object moved: cached positions may be wrong
+        # keys edited / unkeyed object moved: cached positions may be wrong. A moved object with
+        # location keys is skipped: resampling (frame_set) would snap its unkeyed tweak back.
+        _state["dirty"] = True
     schedule()  # also follows selection changes (only new targets get sampled)
 
 
@@ -298,8 +301,9 @@ class MT_OT_edit(bpy.types.Operator):
         return context.area and context.area.type == 'VIEW_3D'
 
     def invoke(self, context, event):
-        self.region = next(r for r in context.area.regions if r.type == 'WINDOW')
-        self.rv3d = context.area.spaces.active.region_3d
+        r = context.region
+        self.region = r if r and r.type == 'WINDOW' else next(r for r in context.area.regions if r.type == 'WINDOW')
+        self.rv3d = self.region.data  # matching view in quad view (spaces.active.region_3d is one fixed quad)
         s = context.scene.motion_trail
         if not s.show:
             s.show = True
@@ -361,10 +365,12 @@ class MT_OT_edit(bpy.types.Operator):
             else:
                 _state["hover"] = self._hit(mouse) if inside else None
             tag_redraw()
-            return {'RUNNING_MODAL'}
+            return {'RUNNING_MODAL'} if self.drag else {'PASS_THROUGH'}  # UI hover elsewhere
         if event.type == 'LEFTMOUSE':
             h = _state["hover"]
             if not press:
+                if not self.drag:
+                    return {'PASS_THROUGH'}  # buttons fire on release
                 self.drag = None
                 return {'RUNNING_MODAL'}
             if not inside:

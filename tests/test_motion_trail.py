@@ -177,3 +177,38 @@ def test_draw_smoke():
         M.draw()
     M._state["hover"] = None
     sc.motion_trail.show = False
+
+
+def test_modal_passes_through_when_idle():
+    """Idle mouse moves / LMB releases must reach the UI (hover, buttons fire on release)."""
+    import types
+    region = types.SimpleNamespace(x=0, y=0, width=100, height=100)
+    op = types.SimpleNamespace(region=region, rv3d=None, drag=None)
+    op._hit = lambda mouse: None
+    ev = lambda t, v='NOTHING', **kw: types.SimpleNamespace(type=t, value=v, mouse_x=500, mouse_y=500,
+                                                              ctrl=False, **kw)
+    modal = M.MT_OT_edit.modal
+    assert modal(op, bpy.context, ev('MOUSEMOVE')) == {'PASS_THROUGH'}
+    assert modal(op, bpy.context, ev('LEFTMOUSE', 'RELEASE')) == {'PASS_THROUGH'}
+    assert modal(op, bpy.context, ev('LEFTMOUSE', 'PRESS')) == {'PASS_THROUGH'}  # outside the view
+    assert modal(op, bpy.context, ev('WHEELUPMOUSE', 'PRESS')) == {'PASS_THROUGH'}
+    op.drag = (("X", None), 1, None, None)
+    assert modal(op, bpy.context, ev('LEFTMOUSE', 'RELEASE')) == {'RUNNING_MODAL'}
+    assert op.drag is None
+
+
+def test_unkeyed_tweak_of_keyed_target_not_resampled():
+    """Moving a target that has location keys must not mark the cache dirty (resample would revert it)."""
+    import types
+    sc, parent, child = _parented_child()
+    bpy.context.view_layer.objects.active = child
+    sc.motion_trail.show = True
+    plain = _empty("Plain")
+    M._state["targets"] = [("Child", None), ("Plain", None)]
+    upd = lambda ob: types.SimpleNamespace(updates=[types.SimpleNamespace(id=ob, is_updated_transform=True)])
+    M._state["dirty"] = False
+    M.on_depsgraph(sc, upd(child))
+    assert not M._state["dirty"]
+    M.on_depsgraph(sc, upd(plain))
+    assert M._state["dirty"]
+    sc.motion_trail.show = False

@@ -42,7 +42,7 @@ COLORS = {"X": (1, 0.3, 0.3, 1), "Y": (0.5, 1, 0.3, 1), "Z": (0.3, 0.6, 1, 1), "
 
 def _draw():
     ctx = bpy.context
-    if not ctx.scene.dimensions_overlay:
+    if not (ctx.scene.dimensions_overlay and ctx.space_data.overlay.show_overlays):
         return
     obs = [o for o in ctx.selected_objects if o.type not in {'CAMERA', 'LIGHT'}]
     if not obs:

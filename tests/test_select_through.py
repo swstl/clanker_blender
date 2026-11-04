@@ -100,7 +100,7 @@ def test_draw_and_keymap():
     import gpu
     gpu.init()
     for lasso in (False, True):
-        ns = types.SimpleNamespace(pts=[(0, 0), (30, 5), (10, 20)], lasso=lasso)
+        ns = types.SimpleNamespace(pts=[(0, 0), (30, 5), (10, 20)], lasso=lasso, _region=bpy.context.region)
         ns._outline = lambda ns=ns: m._SelectThrough._outline(ns)
         with gpu.types.GPUOffScreen(64, 64).bind():
             m._SelectThrough._draw(ns)
@@ -108,3 +108,13 @@ def test_draw_and_keymap():
     prefs.use_hotkeys = False
     assert not m._keymaps
     prefs.use_hotkeys = True
+
+
+def test_poll_needs_window_region():
+    class Ctx:  # F3 over the header: context.region is the HEADER, mouse coords would be wrong
+        mode = 'EDIT_MESH'
+        space_data = types.SimpleNamespace(type='VIEW_3D')
+        region = types.SimpleNamespace(type='HEADER')
+    assert not m._SelectThrough.poll.__func__(m.ST_OT_box, Ctx)
+    Ctx.region = types.SimpleNamespace(type='WINDOW')
+    assert m._SelectThrough.poll.__func__(m.ST_OT_box, Ctx)

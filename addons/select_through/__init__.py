@@ -104,7 +104,8 @@ class _SelectThrough:
 
     @classmethod
     def poll(cls, context):
-        return context.mode == 'EDIT_MESH' and context.space_data and context.space_data.type == 'VIEW_3D'
+        return (context.mode == 'EDIT_MESH' and context.space_data and context.space_data.type == 'VIEW_3D'
+                and context.region and context.region.type == 'WINDOW')  # not the header (F3 there)
 
     def execute(self, context):
         if len(self.path) < 3 or context.region_data is None:
@@ -119,6 +120,7 @@ class _SelectThrough:
     def invoke(self, context, event):
         self.start = None
         self.pts = []
+        self._region = context.region
         self._handle = bpy.types.SpaceView3D.draw_handler_add(self._draw, (), 'WINDOW', 'POST_PIXEL')
         context.workspace.status_text_set(
             "LMB drag: select through  |  Shift: extend  Ctrl: subtract  |  RMB/Esc: cancel")
@@ -127,8 +129,13 @@ class _SelectThrough:
 
     def _finish(self, context):
         bpy.types.SpaceView3D.draw_handler_remove(self._handle, 'WINDOW')
-        context.workspace.status_text_set(None)
-        context.area.tag_redraw()
+        if context.workspace:
+            context.workspace.status_text_set(None)
+        if context.area:
+            context.area.tag_redraw()
+
+    def cancel(self, context):  # file load / window close: don't leave a handler on a freed operator
+        self._finish(context)
 
     def _outline(self):
         if not self.pts:
@@ -140,7 +147,7 @@ class _SelectThrough:
 
     def _draw(self):
         poly = self._outline()
-        if len(poly) < 2:
+        if len(poly) < 2 or bpy.context.region != self._region:  # handler runs in every 3D view
             return
         import gpu
         from gpu_extras.batch import batch_for_shader
