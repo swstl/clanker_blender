@@ -45,6 +45,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Mesh Check | Counts n-gons, tris, non-manifold, loose geometry, zero-area faces, overlapping verts, flipped normals and poles; one click to select or fix each. N > Edit. |
 | Edge Weights Pie | Ctrl+Alt+E pie in Edit Mesh: exact bevel weight / crease values (0.25–1), mark/clear sharp and seam, bevel+sharp combo. |
 | Texture Set Loader | Pick a folder or files of PBR textures and build one Principled material per set (ORM packing, DirectX normals, displacement, box projection, assign or mark as asset). File > Import. |
+| Animation Layers | Layer stack on top of NLA: add/remove/reorder layers, mute, solo, lock, influence (keyable), blend mode; click a layer to key into it with upper layers still visible; merge down, bake to base. N > Animation (3D View, Graph, Dope Sheet). |
 
 ## Development
 

@@ -50,3 +50,10 @@
 - `view_layer.objects` can be stale right after linking objects: call `view_layer.update()`.
 - Exporter "selected only" flags differ: FBX/glTF `use_selection`, OBJ `export_selected_objects`,
   USD `selected_objects_only`.
+- NLA in 5.x: `use_sync_length` (on by default) shrinks a strip to its keys on tweak exit; a new strip
+  on an empty action spans only 2 frames. Plain `anim_data.use_tweak_mode = True` evaluates only lower
+  tracks; `nla.tweakmode_enter(use_upper_stack_evaluation=True)` (needs an NLA area override) fixes it.
+  No Python API to reorder NLA tracks except the channel reorder operator.
+- `Action.is_empty` is False once a slot exists: check keys directly.
+- `ShaderNodeMix.inputs["A"]` returns the hidden float socket; use identifiers like `A_Color`.
+- gpu drawing can be tested headless with `gpu.init()` + a bound `GPUOffScreen`.
