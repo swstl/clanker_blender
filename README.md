@@ -76,6 +76,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Physics Helpers | Drop/settle objects with a temporary rigid body sim (cleans up after itself) or raycast drop to surface; quick cloth with presets, pin group from selection, hook, collision, apply/shape key at frame. N > Physics. |
 | Keymap Tools | Find shortcut conflicts across user + add-on keymaps (report in a text block) and export a searchable HTML keymap cheat sheet. Help menu. |
 | Sculpt Masks | Mask / face sets ↔ vertex groups, mask from color attribute, stored named masks with replace/add/subtract/intersect, quick invert/clear/smooth. Sculpt Mode N > Sculpt. |
+| Preferences Snapshot | Zip preferences, keymaps, startup file + add-on/repo list; restore any snapshot (old files kept as .bak) to sync machines or undo bad settings. Preferences > Add-ons > Preferences Snapshot. |
 
 ## Development
 
