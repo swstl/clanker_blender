@@ -24,60 +24,107 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons
+## Add-ons (50)
+
+### Animation
 
 | Add-on | What it does |
 |---|---|
-| Render Notify | Desktop notification + sound when a render finishes (or is cancelled). |
+| Animation Layers | Layer stack on top of NLA: add/remove/reorder layers, mute, solo, lock, influence (keyable), blend mode; click a layer to key into it with upper layers still visible; merge down, bake to base. N > Animation (3D View, Graph, Dope Sheet). |
+| Key Tweener | AnimAide-style keyframe sliders: tween, blend to neighbor, ease, push/pull, scale average, blend to default, smooth, time offset. Drag or click presets. N > Animation. |
+| Pose Tools | Paste a pose over a frame range (flipped/additive), mirror animation L↔R with time offset (walk cycles), sparse visual bake (keys only / every N), key whole character, reset incl. custom props, select keyed/constrained. Pose Mode N > Animation. |
+| Action Manager | List all (or compatible) actions, click to assign with right slot + frame range, prev/next/play, auto fake-user on save, range edit, push/stash, batch rename, remove unused. N > Animation. |
 | Time Tools | Insert/remove frames at the playhead (keys, NLA, markers), change FPS keeping timing, snap subframe keys. Dope Sheet / Graph Editor > Key menu. |
-| Heavy Object Finder | Ranks visible objects by triangles after modifiers; one-click bounds/wire display or heavy modifiers off in viewport. 3D View > N > View. |
-| Version Snapshots | Timed timestamped backups in `_versions/` next to the .blend, keep last N, named milestones, restore from 3D View > N > View. |
-| Camera Manager | All cameras in one list, one-click switch/look-through, next/prev, per-camera resolution (portrait + landscape in one file), bind to marker, camera from view. 3D View > N > View. |
-| Collection Tools | Move selection to new collection named after active, isolate/show all, sort A-Z, remove empty, select contents, instance at cursor. Outliner right-click > Collection Tools. |
-| Batch Export | Export each object, hierarchy or collection to its own FBX/glTF/OBJ/USD file with Unity/Unreal/Godot presets, origin reset and separate animation files. 3D View > N > Export. |
+| Mesh Onion Skin | Ghosts past/future poses of animated meshes (or a rig's meshes) every N frames or at keyframes, colored and faded, auto-updating. N > Animation. |
+| Motion Trail | Editable motion paths for objects and pose bones: drag keys in the viewport, Ctrl+click path to add a key, X to delete; fading trail with frame ticks. N > Animation. |
+| Quick Retarget | Auto-map bones (Mixamo, Rigify, custom) and bake animation from one armature onto another, A/T-pose aware, root motion scaling, batch all actions, JSON map presets. N > Retarget. |
+| Auto Key Alert | Red frame + 'AUTO KEY' label in every 3D viewport while auto keying is on (color/thickness in prefs). |
+| Shape Key Tools | Split a shape key into .L/.R with a soft center blend (halves sum to original), remove empty keys, reset all values. Shape key specials menu. |
+
+### Rigging & Weights
+
+| Add-on | What it does |
+|---|---|
 | Weight Layers | Non-destructive weight painting layers per vertex group (Mix/Add/Subtract/Multiply/Max/Min, opacity, toggle), auto-composite, flatten, mirror layer. Properties > Data, or N > Weights in Weight Paint. |
 | Weight Tools | Mirror all L/R vertex groups, remove empty/non-bone groups, one-click game-ready cleanup (clean, limit 4, normalize), select unweighted/over-influenced verts, brush weight presets. N > Weights. |
-| Origin & Align | Set origins to any bounding-box point, cursor, selection (from Edit Mode) or face normal without moving geometry; align, distribute, drop to floor, stack. N > Align, or Alt+Shift+O pie. |
-| Scene Cleanup | Merge .001 duplicate materials/node groups/images, remove unused/empty material slots, rename data to object, recursive purge, select objects with bad scale/no material/empty mesh. N > Cleanup. |
-| Apply Modifiers Keep Shape Keys | Apply Subdivision/Mirror/Solidify/Bevel... on meshes with shape keys, keeping key settings and drivers. Object > Apply, or button in Modifiers tab. |
-| Render Queue | Queue render jobs (per camera/marker, overrides, path tokens), render in background Blender processes or export a shell script; Draft/Preview/Final presets. Properties > Output. |
-| Project Files | External files report (missing in red), collect outside files into textures/ sounds/ … with relative paths, one-click project folders + render output path. File > Project Files. |
-| Mesh Check | Counts n-gons, tris, non-manifold, loose geometry, zero-area faces, overlapping verts, flipped normals and poles; one click to select or fix each. N > Edit. |
-| Edge Weights Pie | Ctrl+Alt+E pie in Edit Mesh: exact bevel weight / crease values (0.25–1), mark/clear sharp and seam, bevel+sharp combo. |
-| Texture Set Loader | Pick a folder or files of PBR textures and build one Principled material per set (ORM packing, DirectX normals, displacement, box projection, assign or mark as asset). File > Import. |
-| Animation Layers | Layer stack on top of NLA: add/remove/reorder layers, mute, solo, lock, influence (keyable), blend mode; click a layer to key into it with upper layers still visible; merge down, bake to base. N > Animation (3D View, Graph, Dope Sheet). |
-| Mesh Onion Skin | Ghosts past/future poses of animated meshes (or a rig's meshes) every N frames or at keyframes, colored and faded, auto-updating. N > Animation. |
-| Quick Boolean | Ctrl+Numpad -/+/*// = Difference/Union/Intersect/Slice; cutters become wire, render-hidden, parented and collected in 'Cutters'; apply all + delete cutters. Object > Quick Boolean. |
-| Key Tweener | AnimAide-style keyframe sliders: tween, blend to neighbor, ease, push/pull, scale average, blend to default, smooth, time offset. Drag or click presets. N > Animation. |
-| Modifier Tools | Copy whole stack to selected, toggle viewport/render by type, apply all but Armature, remove by type, fix stack order, find objects by modifier type, Weighted Normal / Smooth by Angle quick add. Properties > Modifiers. |
-| Texture Auto Reload | Watches image files and reloads them when saved in Photoshop/Krita/Substance; never discards unsaved paint. Image > Auto Reload. |
 | Bone Tools | Fix L/R bone naming (vertex groups follow), strip prefixes like mixamorig:, bone chains from edge paths or curves, roll to cursor, numbered subdivide, deform/skinning checks, rig-to-rig Copy Transforms and bake. N > Rig. |
-| Shape Key Tools | Split a shape key into .L/.R with a soft center blend (halves sum to original), remove empty keys, reset all values. Shape key specials menu. |
-| Quick Retarget | Auto-map bones (Mixamo, Rigify, custom) and bake animation from one armature onto another, A/T-pose aware, root motion scaling, batch all actions, JSON map presets. N > Retarget. |
-| Action Manager | List all (or compatible) actions, click to assign with right slot + frame range, prev/next/play, auto fake-user on save, range edit, push/stash, batch rename, remove unused. N > Animation. |
+
+### Modeling & UV
+
+| Add-on | What it does |
+|---|---|
+| Origin & Align | Set origins to any bounding-box point, cursor, selection (from Edit Mode) or face normal without moving geometry; align, distribute, drop to floor, stack. N > Align, or Alt+Shift+O pie. |
+| Quick Boolean | Ctrl+Numpad -/+/*// = Difference/Union/Intersect/Slice; cutters become wire, render-hidden, parented and collected in 'Cutters'; apply all + delete cutters. Object > Quick Boolean. |
 | Quick Lattice | Fit a lattice around selected objects or Edit Mode vertices (auto vertex group), edit it, then apply-and-delete or remove. Right-click menu. |
+| Edge Weights Pie | Ctrl+Alt+E pie in Edit Mesh: exact bevel weight / crease values (0.25–1), mark/clear sharp and seam, bevel+sharp combo. |
+| Mesh Check | Counts n-gons, tris, non-manifold, loose geometry, zero-area faces, overlapping verts, flipped normals and poles; one click to select or fix each. N > Edit. |
 | Select Through | Box/lasso select occluded Edit Mesh verts/edges/faces without X-Ray (Shift+Alt+B / Shift+Alt+L), Shift extend, Ctrl subtract, optional front-faces-only. Select menu. |
-| Material Swatches | Preview grid of all materials with filter; click assigns to selected objects (replace/active slot/add) or Edit Mode faces, select users, new random swatch, distinct random viewport colors. N > Material. |
-| Pose Tools | Paste a pose over a frame range (flipped/additive), mirror animation L↔R with time offset (walk cycles), sparse visual bake (keys only / every N), key whole character, reset incl. custom props, select keyed/constrained. Pose Mode N > Animation. |
-| Saved Views | Viewport bookmarks stored in the .blend: Ctrl+Alt+Shift+1-9 save, Ctrl+Alt+1-9 recall, named list, camera from a saved view. N > View. |
-| Light Manager | All lights + emissive meshes in one list with solo, visibility, color, power; Kelvin presets, aim at cursor/active, place at distance, exposure x0.5/x2, HDRI strength and rotation. N > Light. |
+| Modifier Tools | Copy whole stack to selected, toggle viewport/render by type, apply all but Armature, remove by type, fix stack order, find objects by modifier type, Weighted Normal / Smooth by Angle quick add. Properties > Modifiers. |
+| Apply Modifiers Keep Shape Keys | Apply Subdivision/Mirror/Solidify/Bevel... on meshes with shape keys, keeping key settings and drivers. Object > Apply, or button in Modifiers tab. |
 | UV Tools | Seams by angle/sharp, batch unwrap selected objects with equal texel density, texel density measure/set/copy, checker material toggle (restores originals), straighten to grid, select flipped, UV map sync across objects. UV Editor N > UV Tools. |
-| Motion Trail | Editable motion paths for objects and pose bones: drag keys in the viewport, Ctrl+click path to add a key, X to delete; fading trail with frame ticks. N > Animation. |
-| Auto Key Alert | Red frame + 'AUTO KEY' label in every 3D viewport while auto keying is on (color/thickness in prefs). |
-| Bake Helper | One-click Cycles PBR baking (color, roughness, metallic, normal, AO, emission, ORM...) per object, atlas or high-to-low, auto image nodes + full restore, baked material. N > Bake or Properties > Render. |
-| Batch Material Edit | Set/multiply/add Principled inputs (roughness, metallic, IOR, alpha, emission…) and backface culling / render method across selected or all materials, skipping texture-linked inputs; sync viewport colors from base color. N > Material. |
-| Render Border from Selection | Fit the render region to selected objects from the camera (with padding), or follow them every frame for animated crops. View > View Regions, Properties > Output. |
-| Turntable | Camera framed on the selection with a seamless 360° loop (camera orbit or objects spin), elevation, margin, lens. Add > Camera > Add Turntable. |
-| Display Pie | Shift+Alt+D in Object Mode: display as bounds/wire/solid/textured, wireframe, in front, name, render visibility, selectable for all selected; view transform switch (AgX/Standard/PBR Neutral/False Color) + exposure reset. |
 | Dimensions Overlay | Live X/Y/Z size of the selection (scene units) and distance between two selected objects drawn in the viewport. Toggle in Viewport Overlays > Objects. |
-| Script Watcher | Watch a .py file (re-run on save) or an add-on folder (disable, purge modules, re-enable on save); shows last result/error. Text Editor N > Text. |
-| Render Passes to Files | One click wires every enabled render pass (AOVs, Cryptomatte) per view layer to a multilayer EXR or per-pass files, re-run safe, optional denoise, pass toggle grid. Properties > View Layer. |
-| VSE Tools | Ripple delete (Shift+Delete), ripple trim to playhead (Alt+[ / Alt+]), insert/remove gap, batch blend/opacity/volume, frame-rate check, channel mute — 5.3-style ripple editing for 5.2 LTS. Sequencer Strip > Ripple. |
-| Physics Helpers | Drop/settle objects with a temporary rigid body sim (cleans up after itself) or raycast drop to surface; quick cloth with presets, pin group from selection, hook, collision, apply/shape key at frame. N > Physics. |
-| Keymap Tools | Find shortcut conflicts across user + add-on keymaps (report in a text block) and export a searchable HTML keymap cheat sheet. Help menu. |
+
+### Sculpting & Physics
+
+| Add-on | What it does |
+|---|---|
 | Sculpt Masks | Mask / face sets ↔ vertex groups, mask from color attribute, stored named masks with replace/add/subtract/intersect, quick invert/clear/smooth. Sculpt Mode N > Sculpt. |
-| Preferences Snapshot | Zip preferences, keymaps, startup file + add-on/repo list; restore any snapshot (old files kept as .bak) to sync machines or undo bad settings. Preferences > Add-ons > Preferences Snapshot. |
+| Physics Helpers | Drop/settle objects with a temporary rigid body sim (cleans up after itself) or raycast drop to surface; quick cloth with presets, pin group from selection, hook, collision, apply/shape key at frame. N > Physics. |
+
+### Materials & Textures
+
+| Add-on | What it does |
+|---|---|
+| Texture Set Loader | Pick a folder or files of PBR textures and build one Principled material per set (ORM packing, DirectX normals, displacement, box projection, assign or mark as asset). File > Import. |
+| Material Swatches | Preview grid of all materials with filter; click assigns to selected objects (replace/active slot/add) or Edit Mode faces, select users, new random swatch, distinct random viewport colors. N > Material. |
+| Batch Material Edit | Set/multiply/add Principled inputs (roughness, metallic, IOR, alpha, emission…) and backface culling / render method across selected or all materials, skipping texture-linked inputs; sync viewport colors from base color. N > Material. |
+| Bake Helper | One-click Cycles PBR baking (color, roughness, metallic, normal, AO, emission, ORM...) per object, atlas or high-to-low, auto image nodes + full restore, baked material. N > Bake or Properties > Render. |
+| Texture Auto Reload | Watches image files and reloads them when saved in Photoshop/Krita/Substance; never discards unsaved paint. Image > Auto Reload. |
 | Node Finder | File-wide node search (materials, worlds, GN, compositor, nested groups) with jump-to, where-used, missing images, node group swap and unused-node cleanup. Node Editor N > Find. |
+
+### Rendering & Cameras
+
+| Add-on | What it does |
+|---|---|
+| Render Queue | Queue render jobs (per camera/marker, overrides, path tokens), render in background Blender processes or export a shell script; Draft/Preview/Final presets. Properties > Output. |
+| Render Notify | Desktop notification + sound when a render finishes (or is cancelled). |
+| Render Passes to Files | One click wires every enabled render pass (AOVs, Cryptomatte) per view layer to a multilayer EXR or per-pass files, re-run safe, optional denoise, pass toggle grid. Properties > View Layer. |
+| Render Border from Selection | Fit the render region to selected objects from the camera (with padding), or follow them every frame for animated crops. View > View Regions, Properties > Output. |
+| Camera Manager | All cameras in one list, one-click switch/look-through, next/prev, per-camera resolution (portrait + landscape in one file), bind to marker, camera from view. 3D View > N > View. |
+| Light Manager | All lights + emissive meshes in one list with solo, visibility, color, power; Kelvin presets, aim at cursor/active, place at distance, exposure x0.5/x2, HDRI strength and rotation. N > Light. |
+| Turntable | Camera framed on the selection with a seamless 360° loop (camera orbit or objects spin), elevation, margin, lens. Add > Camera > Add Turntable. |
+
+### Scene, Files & Export
+
+| Add-on | What it does |
+|---|---|
+| Batch Export | Export each object, hierarchy or collection to its own FBX/glTF/OBJ/USD file with Unity/Unreal/Godot presets, origin reset and separate animation files. 3D View > N > Export. |
+| Scene Cleanup | Merge .001 duplicate materials/node groups/images, remove unused/empty material slots, rename data to object, recursive purge, select objects with bad scale/no material/empty mesh. N > Cleanup. |
+| Collection Tools | Move selection to new collection named after active, isolate/show all, sort A-Z, remove empty, select contents, instance at cursor. Outliner right-click > Collection Tools. |
+| Project Files | External files report (missing in red), collect outside files into textures/ sounds/ … with relative paths, one-click project folders + render output path. File > Project Files. |
+| Version Snapshots | Timed timestamped backups in `_versions/` next to the .blend, keep last N, named milestones, restore from 3D View > N > View. |
+
+### Viewport & UI
+
+| Add-on | What it does |
+|---|---|
+| Saved Views | Viewport bookmarks stored in the .blend: Ctrl+Alt+Shift+1-9 save, Ctrl+Alt+1-9 recall, named list, camera from a saved view. N > View. |
+| Display Pie | Shift+Alt+D in Object Mode: display as bounds/wire/solid/textured, wireframe, in front, name, render visibility, selectable for all selected; view transform switch (AgX/Standard/PBR Neutral/False Color) + exposure reset. |
+| Heavy Object Finder | Ranks visible objects by triangles after modifiers; one-click bounds/wire display or heavy modifiers off in viewport. 3D View > N > View. |
+
+### Video & 2D
+
+| Add-on | What it does |
+|---|---|
+| VSE Tools | Ripple delete (Shift+Delete), ripple trim to playhead (Alt+[ / Alt+]), insert/remove gap, batch blend/opacity/volume, frame-rate check, channel mute — 5.3-style ripple editing for 5.2 LTS. Sequencer Strip > Ripple. |
+
+### System & Development
+
+| Add-on | What it does |
+|---|---|
+| Script Watcher | Watch a .py file (re-run on save) or an add-on folder (disable, purge modules, re-enable on save); shows last result/error. Text Editor N > Text. |
+| Keymap Tools | Find shortcut conflicts across user + add-on keymaps (report in a text block) and export a searchable HTML keymap cheat sheet. Help menu. |
+| Preferences Snapshot | Zip preferences, keymaps, startup file + add-on/repo list; restore any snapshot (old files kept as .bak) to sync machines or undo bad settings. Preferences > Add-ons > Preferences Snapshot. |
 
 ## Development
 
