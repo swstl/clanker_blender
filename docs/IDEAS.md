@@ -66,3 +66,17 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 64 | Color management quick switch | Render | done (display_pie) |
 | 65 | 3D cursor history/bookmarks/snap with rotation | 3D View | todo |
 | 66 | Game-ready collision (UCX_), LODs, sockets, lightmap UV | Game Engine | todo |
+| 67 | Group under empty (Maya Ctrl+G) | Object | todo |
+| 68 | Playblast with burn-ins, isolated settings | Animation | todo |
+| 69 | Space switch / dynamic parent | Animation | todo |
+| 70 | Stepped preview (blocking toggle) | Animation | todo |
+| 71 | Cable generator | Modeling | todo |
+| 72 | Objects along curve | Modeling | todo |
+| 73 | Palette from image | Material | todo |
+| 74 | Text animator (typewriter, counter, per-letter) | Motion Graphics | todo |
+| 75 | Tension map | Rigging | todo |
+| 76 | Object selection sets | Object | todo |
+| 77 | Product stage (cyclorama, lights, camera) | Render | todo |
+| 78 | IK/FK snap for any rig | Rigging | todo |
+| 79 | Walls from edges | Modeling | todo |
+| 80 | 3D print split with connectors | Modeling | todo |
