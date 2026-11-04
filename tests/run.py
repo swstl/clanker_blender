@@ -46,6 +46,30 @@ def check_manifest(addon_id):
     return errs
 
 
+def default_keymap_clashes():
+    """Add-on hotkeys that shadow a key of Blender's default keymap in the same keymap."""
+    import importlib.util
+    path = os.path.join(bpy.utils.system_resource('SCRIPTS'), "presets", "keyconfig", "keymap_data",
+                        "blender_default.py")
+    spec = importlib.util.spec_from_file_location("bl_default_km", path)
+    bd = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bd)
+    default = {}
+    for name, _space, items in bd.generate_keymaps():
+        for op, ev, _props in items["items"]:
+            key = (name, ev.get("type"), ev.get("value"), bool(ev.get("ctrl")), bool(ev.get("alt")),
+                   bool(ev.get("shift")), bool(ev.get("any")))
+            default.setdefault(key, []).append(op)
+    out = []
+    for km in bpy.context.window_manager.keyconfigs.addon.keymaps:
+        for k in km.keymap_items:
+            key = (km.name, k.type, k.value, bool(k.ctrl), bool(k.alt), bool(k.shift), bool(k.any))
+            if key in default:
+                out.append(f"[{km.name}] {k.idname} {k.type} ctrl={k.ctrl} alt={k.alt} shift={k.shift} "
+                           f"-> {default[key]}")
+    return out
+
+
 def main():
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
     ids = argv or sorted(d for d in os.listdir(ADDONS)
@@ -94,6 +118,10 @@ def main():
         except Exception:
             failures += 1
             print(f"FAIL re-register {addon_id}\n{traceback.format_exc()}")
+
+    for clash in default_keymap_clashes():
+        failures += 1
+        print(f"FAIL keymap clash with Blender default: {clash}")
 
     print(f"\n{'FAILED' if failures else 'PASSED'}: {failures} failure(s)")
     sys.exit(1 if failures else 0)
