@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "time_tools"
+version = "1.0.0"
+name = "Time Tools"
+tagline = "Insert or remove frames at the playhead and rescale animation to a new frame rate"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.4.0"
+tags = ["Animation"]

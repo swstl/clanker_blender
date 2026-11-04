@@ -23,7 +23,7 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 16 | Retarget-lite (bone map, constraints, bake) | Animation | todo |
 | 17 | Smart bake helper | Animation | todo |
 | 18 | Paste pose flipped over range | Animation | todo |
-| 19 | Insert/remove time at playhead, fps rescale | Animation | todo |
+| 19 | Insert/remove time at playhead, fps rescale | Animation | done (time_tools) |
 | 21 | Bone tools (suffix fix, roll align, chain from verts) | Rigging | todo |
 | 22 | Action manager (list, fake user, batch) | Animation | todo |
 | 23 | Quick boolean | Modeling | todo |
