@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (52)
+## Add-ons (53)
 
 ### Animation
 
@@ -112,6 +112,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 |---|---|
 | Saved Views | Viewport bookmarks stored in the .blend: Ctrl+Alt+Shift+1-9 save, Ctrl+Alt+1-9 recall, named list, camera from a saved view. N > View. |
 | Display Pie | Shift+Alt+D in Object Mode: display as bounds/wire/solid/textured, wireframe, in front, name, render visibility, selectable for all selected; view transform switch (AgX/Standard/PBR Neutral/False Color) + exposure reset. |
+| Pie Builder | Build your own pie menus in Preferences: 8 slots of operator + properties + icon + label, hotkey per pie in any editor, no code. Preferences > Add-ons > Pie Builder. |
 | Heavy Object Finder | Ranks visible objects by triangles after modifiers; one-click bounds/wire display or heavy modifiers off in viewport. 3D View > N > View. |
 
 ### Video & 2D
