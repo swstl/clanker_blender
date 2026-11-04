@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "material_swatches"
+version = "1.0.0"
+name = "Material Swatches"
+tagline = "Click a material swatch to assign it to selected objects or faces"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Material", "3D View"]
