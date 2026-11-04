@@ -53,7 +53,7 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 51 | Paste clipboard image as reference | 3D View | todo |
 | 52 | Render border from selection (animated) | Render | todo |
 | 53 | Turntable setup | Camera | todo |
-| 54 | Quick cloth with pins | Physics | todo |
+| 54 | Quick cloth with pins | Physics | done (physics_helpers) |
 | 55 | Node align / straighten reroutes | Node | todo |
 | 56 | Grease Pencil timing tools (GPv3) | Grease Pencil | todo |
 | 57 | Asset catalogs from collections + batch previews | Pipeline | todo |

@@ -73,6 +73,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Script Watcher | Watch a .py file (re-run on save) or an add-on folder (disable, purge modules, re-enable on save); shows last result/error. Text Editor N > Text. |
 | Render Passes to Files | One click wires every enabled render pass (AOVs, Cryptomatte) per view layer to a multilayer EXR or per-pass files, re-run safe, optional denoise, pass toggle grid. Properties > View Layer. |
 | VSE Tools | Ripple delete (Shift+Delete), ripple trim to playhead (Alt+[ / Alt+]), insert/remove gap, batch blend/opacity/volume, frame-rate check, channel mute — 5.3-style ripple editing for 5.2 LTS. Sequencer Strip > Ripple. |
+| Physics Helpers | Drop/settle objects with a temporary rigid body sim (cleans up after itself) or raycast drop to surface; quick cloth with presets, pin group from selection, hook, collision, apply/shape key at frame. N > Physics. |
 
 ## Development
 
