@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "heavy_finder"
+version = "1.0.0"
+name = "Heavy Object Finder"
+tagline = "Find the objects that slow your viewport down and tame them in one click"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["3D View", "Scene"]
