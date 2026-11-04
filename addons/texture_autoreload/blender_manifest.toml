@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "texture_autoreload"
+version = "1.0.0"
+name = "Texture Auto Reload"
+tagline = "Reload images automatically when you save them in Photoshop, Krita or Substance"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Material", "Pipeline"]
+
+[permissions]
+files = "Reads modification times of image files used in the scene"

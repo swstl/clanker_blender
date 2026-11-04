@@ -40,3 +40,4 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 36 | Camera manager | Camera | done (camera_manager) |
 | 39 | Heavy object finder / viewport stats | Scene | done (heavy_finder) |
 | 40 | Operator history panel | UI | todo |
+| 41 | Texture auto-reload when edited externally | Material | todo |
