@@ -3,7 +3,7 @@ CATEGORIES = {
     "Animation": ["Animation Layers", "Key Tweener", "Stepped Preview", "Playblast", "Space Switch", "Pose Tools", "Action Manager", "Time Tools",
                   "Mesh Onion Skin", "Motion Trail", "Quick Retarget", "Auto Key Alert", "Shape Key Tools"],
     "Rigging & Weights": ["Weight Layers", "Weight Tools", "Bone Tools", "Tension Map", "IK/FK Snap"],
-    "Modeling & UV": ["Origin & Align", "Group Under Empty", "Curve Tools", "Quick Boolean", "Quick Lattice", "Edge Weights Pie", "Mesh Check",
+    "Modeling & UV": ["Origin & Align", "Group Under Empty", "Curve Tools", "Print Split", "Archviz Walls", "Quick Boolean", "Quick Lattice", "Edge Weights Pie", "Mesh Check",
                       "Select Through", "Modifier Tools", "Apply Modifiers Keep Shape Keys", "UV Tools",
                       "Dimensions Overlay"],
     "Sculpting & Physics": ["Sculpt Masks", "Remesh Tools", "Physics Helpers"],

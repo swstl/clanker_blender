@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "print_split"
+version = "1.0.0"
+name = "Print Split"
+tagline = "Split models for 3D printing with pegs, holes and bed checks"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Mesh", "Modeling", "Import-Export"]
