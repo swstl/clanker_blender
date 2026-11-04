@@ -99,7 +99,7 @@ class CT_OT_goto(bpy.types.Operator):
     bl_description = "Put the cursor at this bookmark"
 
     index: bpy.props.IntProperty()
-    remove: bpy.props.BoolProperty()
+    remove: bpy.props.BoolProperty(options={'SKIP_SAVE'})
 
     def execute(self, context):
         marks = context.scene.cursor_tools_marks

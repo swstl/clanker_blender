@@ -154,9 +154,9 @@ class GPT_OT_set_exposure(bpy.types.Operator):
                       "rippling later keys on the selected layers")
     bl_options = {'REGISTER', 'UNDO'}
 
-    length: bpy.props.IntProperty(name="Frames", default=2, description="Hold length, or change when Relative")
-    relative: bpy.props.BoolProperty(name="Relative", description="Add Frames to the current hold")
-    selected: bpy.props.BoolProperty(name="Selected Keys", description="Use selected keys instead of the playhead key")
+    length: bpy.props.IntProperty(name="Frames", default=2, description="Hold length, or change when Relative", options={'SKIP_SAVE'})
+    relative: bpy.props.BoolProperty(name="Relative", description="Add Frames to the current hold", options={'SKIP_SAVE'})
+    selected: bpy.props.BoolProperty(name="Selected Keys", description="Use selected keys instead of the playhead key", options={'SKIP_SAVE'})
     all_layers: _all_layers
 
     def invoke(self, context, event):

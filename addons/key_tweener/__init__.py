@@ -295,6 +295,11 @@ class _SliderBase:
             return {'CANCELLED'}
         return {'RUNNING_MODAL'}
 
+    def cancel(self, context):  # file load / window close drops the handler: revert like Esc
+        self._snap.restore(remove_inserted=True)
+        if context.area:
+            context.area.header_text_set(None)
+
 
 _ops = [type(f"KTW_OT_{tid}", (_SliderBase, bpy.types.Operator), {
     "bl_idname": f"key_tweener.{tid}", "bl_label": label,

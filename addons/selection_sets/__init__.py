@@ -61,7 +61,7 @@ class SS_OT_action(bpy.types.Operator):
         ('SELECT_ONLY', "Select Only", "Deselect everything else"),
         ('DESELECT', "Deselect", ""), ('ADD', "Add Selected", ""), ('REMOVE', "Remove Selected", ""),
         ('HIDE', "Hide", ""), ('SHOW', "Show", ""), ('DELETE', "Delete Set", "")])
-    index: bpy.props.IntProperty(default=-1)
+    index: bpy.props.IntProperty(default=-1, options={'SKIP_SAVE'})
 
     def execute(self, context):
         sc = context.scene

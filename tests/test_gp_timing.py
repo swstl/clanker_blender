@@ -118,3 +118,9 @@ def test_layer_solo_restore_lock_step():
     assert gp.layers.active.name == "C"
     bpy.ops.gp_timing.layer_activate(name="A")
     assert gp.layers.active.name == "A"
+
+
+def test_exposure_props_not_remembered():
+    # Buttons set length / relative / selected in different combinations.
+    props = bpy.ops.gp_timing.set_exposure.get_rna_type().properties
+    assert all(props[p].is_skip_save for p in ("length", "relative", "selected"))

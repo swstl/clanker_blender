@@ -55,7 +55,7 @@ class IP_OT_extract(bpy.types.Operator):
     bl_description = "Find the main colors of the image and store them as a Palette (+ optional swatch materials)"
     bl_options = {'REGISTER', 'UNDO'}
 
-    image: bpy.props.StringProperty(name="Image")
+    image: bpy.props.StringProperty(name="Image", options={'SKIP_SAVE'})
     count: bpy.props.IntProperty(name="Colors", default=6, min=2, max=16)
     materials: bpy.props.BoolProperty(name="Create Swatch Materials", default=False)
     copy_hex: bpy.props.BoolProperty(name="Copy Hex Codes", default=True)

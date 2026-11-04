@@ -183,7 +183,7 @@ class SM_OT_vgroup_to_mask(_MeshOp, bpy.types.Operator):
     bl_label = "Vertex Group to Mask"
     bl_description = "Combine a vertex group's weights into the sculpt mask"
 
-    group: bpy.props.StringProperty(name="Group", description="Empty uses the active group")
+    group: bpy.props.StringProperty(name="Group", description="Empty uses the active group", options={'SKIP_SAVE'})
     mode: bpy.props.EnumProperty(name="Mode", items=MODES[:4])
 
     def run(self, ob, me):
@@ -199,7 +199,7 @@ class SM_OT_faceset_to_vgroups(_MeshOp, bpy.types.Operator):
     bl_description = "Create one vertex group per face set ('FaceSet <id>', weight 1)"
 
     face_set: bpy.props.IntProperty(name="Face Set", default=0, min=0,
-                                    description="Only this face set id (0 = all face sets)")
+                                    description="Only this face set id (0 = all face sets)", options={'SKIP_SAVE'})
 
     def run(self, ob, me):
         fs = get_face_sets(me)
@@ -222,7 +222,7 @@ class SM_OT_vgroup_to_faceset(_MeshOp, bpy.types.Operator):
     bl_label = "Vertex Group to Face Set"
     bl_description = "New face set from faces whose vertices all weigh more than the threshold"
 
-    group: bpy.props.StringProperty(name="Group", description="Empty uses the active group")
+    group: bpy.props.StringProperty(name="Group", description="Empty uses the active group", options={'SKIP_SAVE'})
     threshold: bpy.props.FloatProperty(name="Threshold", default=0.5, min=0.0, max=1.0)
 
     def run(self, ob, me):
@@ -285,7 +285,7 @@ class SM_OT_restore(_MeshOp, bpy.types.Operator):
     bl_label = "Restore Mask"
     bl_description = "Combine a stored mask into the current mask"
 
-    name: bpy.props.StringProperty(name="Name", description="Empty uses the active list item")
+    name: bpy.props.StringProperty(name="Name", description="Empty uses the active list item", options={'SKIP_SAVE'})
     mode: bpy.props.EnumProperty(name="Mode", items=(MODES[0], MODES[1], MODES[2], MODES[4]))
 
     def run(self, ob, me):
@@ -316,7 +316,7 @@ class SM_OT_vgroup_dialog(_MeshOp, bpy.types.Operator):
     bl_description = "Pick a vertex group to turn into a mask or a face set"
 
     target: bpy.props.EnumProperty(items=(('MASK', "Mask", ""), ('FACESET', "Face Set", "")))
-    group: bpy.props.StringProperty(name="Group")
+    group: bpy.props.StringProperty(name="Group", options={'SKIP_SAVE'})
     mode: bpy.props.EnumProperty(name="Mode", items=MODES[:4])
     threshold: bpy.props.FloatProperty(name="Threshold", default=0.5, min=0.0, max=1.0)
 

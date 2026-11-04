@@ -44,3 +44,8 @@ def test_bookmark_and_face():
     assert abs(sc.cursor.location.x - 1) < 1e-5
     z = sc.cursor.matrix.to_3x3().col[2]
     assert abs(z.x - 1) < 1e-5
+
+
+def test_remove_not_remembered():
+    # The bookmark button leaves remove unset: after an X click it must not delete too.
+    assert bpy.ops.cursor_tools.goto.get_rna_type().properties['remove'].is_skip_save

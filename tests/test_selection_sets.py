@@ -36,3 +36,9 @@ def test_sets_roundtrip():
     assert {o.name for o in sc.selection_sets[0].members()} == {"B"}
     bpy.ops.selection_sets.action(action='DELETE')
     assert not sc.selection_sets
+
+
+def test_index_not_remembered():
+    # Panel buttons leave index unset: it must not reuse the last clicked list row.
+    props = bpy.ops.selection_sets.action.get_rna_type().properties
+    assert props['index'].is_skip_save and not props['action'].is_skip_save

@@ -77,7 +77,7 @@ class GE_OT_group(bpy.types.Operator):
     bl_description = "Parent the selected objects under a new empty (keeps world transforms)"
     bl_options = {'REGISTER', 'UNDO'}
 
-    name: bpy.props.StringProperty(name="Name", default="Group")
+    name: bpy.props.StringProperty(name="Name", default="Group", options={'SKIP_SAVE'})
     pivot: bpy.props.EnumProperty(name="Pivot", items=[
         ('BOTTOM', "Bottom Center", ""), ('CENTER', "Bounds Center", ""),
         ('CURSOR', "3D Cursor", ""), ('ACTIVE', "Active Object", "")])
