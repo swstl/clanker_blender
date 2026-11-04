@@ -77,6 +77,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Keymap Tools | Find shortcut conflicts across user + add-on keymaps (report in a text block) and export a searchable HTML keymap cheat sheet. Help menu. |
 | Sculpt Masks | Mask / face sets ↔ vertex groups, mask from color attribute, stored named masks with replace/add/subtract/intersect, quick invert/clear/smooth. Sculpt Mode N > Sculpt. |
 | Preferences Snapshot | Zip preferences, keymaps, startup file + add-on/repo list; restore any snapshot (old files kept as .bak) to sync machines or undo bad settings. Preferences > Add-ons > Preferences Snapshot. |
+| Node Finder | File-wide node search (materials, worlds, GN, compositor, nested groups) with jump-to, where-used, missing images, node group swap and unused-node cleanup. Node Editor N > Find. |
 
 ## Development
 
