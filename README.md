@@ -148,5 +148,17 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 
 ## Development
 
-- `./scripts/test.sh [addon_id ...]` runs headless tests from `tests/test_<addon_id>.py` (Blender in background, factory settings).
-- See `docs/ADDON_GUIDE.md` for conventions.
+- `./scripts/test.sh [addon_id ...]` runs everything headless (Blender in background, factory settings):
+  enables each add-on, checks its manifest (rules `extension build` enforces), runs every panel/menu
+  `draw()` against a fake layout that validates property names, operator ids and icons, runs
+  `tests/test_<addon_id>.py`, disables/re-enables it, and finally fails on hotkeys that shadow
+  Blender's default keymap.
+- `python3 scripts/ship.py <id> <idea#|-> "<Name>" "<description>" "<commit message>"` tests a finished
+  add-on, adds it to this README (grouped via `scripts/categories.py`), marks it done in
+  `docs/IDEAS.md`, commits and pushes.
+- Conventions and Blender 5.x API gotchas: `docs/ADDON_GUIDE.md`. Idea backlog: `docs/IDEAS.md`.
+
+### Not tested headless
+Interactive parts (modal drag tools like Select Through, Motion Trail, Key Tweener sliders; real
+clipboard paste; viewport drawing) only run in a real Blender window. Report issues if something
+misbehaves there.
