@@ -43,3 +43,4 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 41 | Texture auto-reload when edited externally | Material | todo |
 | 42 | Shape key L/R split, empty key cleanup | Animation | todo |
 | 43 | Quick lattice around selection | Modeling | todo |
+| 44 | Auto-key on warning | Animation | todo |

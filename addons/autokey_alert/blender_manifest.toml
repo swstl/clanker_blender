@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "autokey_alert"
+version = "1.0.0"
+name = "Auto Key Alert"
+tagline = "Red viewport frame while auto keying is on so you never key by accident"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Animation", "3D View"]
