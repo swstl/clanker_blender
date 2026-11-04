@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "hair_tools"
+version = "1.0.0"
+name = "Hair Tools"
+tagline = "Mirror hair curves, convert them to hair cards, batch helpers"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Sculpt", "Mesh", "Game Engine"]

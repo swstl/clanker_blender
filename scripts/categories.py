@@ -6,7 +6,7 @@ CATEGORIES = {
     "Modeling & UV": ["Origin & Align", "Precision Edit", "Symmetry Check", "Group Under Empty", "Curve Tools", "GN Panel", "Print Split", "Archviz Walls", "Quick Boolean", "Quick Lattice", "Edge Weights Pie", "Mesh Check",
                       "Select Through", "Modifier Tools", "Apply Modifiers Keep Shape Keys", "UV Tools",
                       "Dimensions Overlay"],
-    "Sculpting & Physics": ["Sculpt Layers", "Sculpt Masks", "Remesh Tools", "Physics Helpers"],
+    "Sculpting & Physics": ["Sculpt Layers", "Hair Tools", "Sculpt Masks", "Remesh Tools", "Physics Helpers"],
     "Materials & Textures": ["Paint Saver", "Texture Set Loader", "Image Palette", "Texture Proxies", "Material Swatches", "Batch Material Edit", "Bake Helper",
                              "Texture Auto Reload", "Node Finder", "Node Tidy"],
     "Rendering & Cameras": ["Render Queue", "Render Preflight", "HDRI Browser", "Light Link Matrix", "Product Stage", "View Layer Matrix", "Render Notify", "Render Passes to Files", "Render Border from Selection",

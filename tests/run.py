@@ -22,7 +22,8 @@ def clean():
     """Remove all data a test may have created."""
     for coll in (bpy.data.objects, bpy.data.meshes, bpy.data.armatures, bpy.data.actions,
                  bpy.data.materials, bpy.data.cameras, bpy.data.lights, bpy.data.curves,
-                 bpy.data.images, bpy.data.node_groups, bpy.data.lattices):
+                 bpy.data.images, bpy.data.node_groups, bpy.data.lattices, bpy.data.hair_curves,
+                 bpy.data.grease_pencils):
         for item in list(coll):
             coll.remove(item)
     for c in list(bpy.data.collections):

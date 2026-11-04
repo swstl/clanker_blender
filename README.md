@@ -25,7 +25,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (87)
+## Add-ons (88)
 
 ### Animation
 
@@ -84,6 +84,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Add-on | What it does |
 |---|---|
 | Sculpt Layers | Non-destructive sculpt layers on shape keys: sculpt into the active layer, strength −1..2, mute/solo, vertex-group or sculpt-mask masks, merge down, bake mix, apply to basis. Sculpt N > Sculpt. |
+| Hair Tools | Mirror Curves hair across the surface (attributes kept, roots re-snapped, duplicates skipped), convert curves to UV-atlased game hair cards, set radius root→tip, delete short curves. N > Hair. |
 | Sculpt Masks | Mask / face sets ↔ vertex groups, mask from color attribute, stored named masks with replace/add/subtract/intersect, quick invert/clear/smooth. Sculpt Mode N > Sculpt. |
 | Remesh Tools | Voxel/Quadriflow remesh with hidden backup, detail reprojection (shrinkwrap or multires), face-count estimate, restore from backup, quick decimated LOD copy. N > Sculpt. |
 | Physics Helpers | Drop/settle objects with a temporary rigid body sim (cleans up after itself) or raycast drop to surface; quick cloth with presets, pin group from selection, hook, collision, apply/shape key at frame. N > Physics. |
