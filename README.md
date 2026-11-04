@@ -15,6 +15,7 @@ cd clanker_blender
 Set `BLENDER=/path/to/blender` if Blender is not on `PATH` (Steam installs are found automatically).
 After `git pull`, restart Blender (re-run `install.sh` to enable newly added add-ons).
 Disable single add-ons in *Edit > Preferences > Add-ons* (filter by "Clanker").
+Too many sidebar tabs? In the **Clanker Hub** add-on preferences, pick *Merge Into One Tab*.
 
 ### Manual, without the script
 *Edit > Preferences > Get Extensions > Repositories (dropdown) > + > Add Local Repository*,
