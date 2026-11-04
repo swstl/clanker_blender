@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (65)
+## Add-ons (66)
 
 ### Animation
 
@@ -34,6 +34,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Key Tweener | AnimAide-style keyframe sliders: tween, blend to neighbor, ease, push/pull, scale average, blend to default, smooth, time offset. Drag or click presets. N > Animation. |
 | Stepped Preview | Maya-style stepped playback toggle for blocking: hold each key (originals restored exactly) or sample every N frames via a removable Stepped modifier. Button in Dope Sheet/Graph playback header. |
 | Playblast | One-click viewport animation preview to //playblasts/<file>_v###.mp4 with burn-ins (frame, camera, lens, marker, note); render settings swapped and always restored. View menu + N > View. |
+| Space Switch | Dynamic parenting for objects and bones: add parents (Child Of), switch at current frame without popping, list/jump to switches, bake range back to world. N > Animation. |
 | Pose Tools | Paste a pose over a frame range (flipped/additive), mirror animation L↔R with time offset (walk cycles), sparse visual bake (keys only / every N), key whole character, reset incl. custom props, select keyed/constrained. Pose Mode N > Animation. |
 | Action Manager | List all (or compatible) actions, click to assign with right slot + frame range, prev/next/play, auto fake-user on save, range edit, push/stash, batch rename, remove unused. N > Animation. |
 | Time Tools | Insert/remove frames at the playhead (keys, NLA, markers), change FPS keeping timing, snap subframe keys. Dope Sheet / Graph Editor > Key menu. |
