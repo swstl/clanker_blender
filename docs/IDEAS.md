@@ -90,3 +90,11 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 88 | Texture downscaler proxies | Material | todo |
 | 89 | View layer x collection toggle matrix | Scene | todo |
 | 90 | Batch import a folder of models | Import-Export | todo |
+| 91 | Paint saver: never lose painted images | Paint | todo |
+| 92 | Sculpt layers (shape-key based) | Sculpt | todo |
+| 93 | Symmetry check / mirror repair | Modeling | todo |
+| 94 | Export preflight for game engines | Game Engine | todo |
+| 95 | Hair mirror (Curves) + hair cards | Hair | todo |
+| 96 | Light link matrix | Lighting | todo |
+| 97 | Grease Pencil drawing guides (perspective) | Grease Pencil | todo |
+| 98 | Grease Pencil line cleanup | Grease Pencil | todo |
