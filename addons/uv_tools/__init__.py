@@ -490,9 +490,9 @@ class UVT_OT_uv_maps(_ObjOp, bpy.types.Operator):
         ('REMOVE', "Remove", "Remove the UV map"),
         ('ACTIVE', "Set Active", "Make the UV map active and active for render"),
         ('MATCH', "Match List", "Make every object have exactly these UV maps in this order")))
-    name: bpy.props.StringProperty(name="Name", default="UVMap")
-    new_name: bpy.props.StringProperty(name="New Name", default="UVMap")
-    names: bpy.props.StringProperty(name="Names", default="UVMap, Lightmap",
+    name: bpy.props.StringProperty(name="Name", default="UVMap", options={'SKIP_SAVE'})
+    new_name: bpy.props.StringProperty(name="New Name", default="UVMap", options={'SKIP_SAVE'})
+    names: bpy.props.StringProperty(name="Names", default="UVMap, Lightmap", options={'SKIP_SAVE'},
                                     description="Comma separated UV map names, in order")
 
     def execute(self, context):

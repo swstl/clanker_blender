@@ -32,6 +32,9 @@ def _check_op(idname):
         raise DrawError(f"unknown operator {idname!r}")
 
 
+CALLS = []  # (idname, OpProps) for every layout.operator() call during a check
+
+
 class OpProps:
     def __init__(self, idname):
         object.__setattr__(self, "_props", getattr(getattr(bpy.ops, idname.split(".")[0]),
@@ -41,6 +44,7 @@ class OpProps:
     def __setattr__(self, k, v):
         if k not in self._props:
             raise DrawError(f"operator {self._id} has no property {k!r}")
+        self.__dict__.setdefault("_set", set()).add(k)
 
     def __getattr__(self, k):
         return Loose()
@@ -120,7 +124,9 @@ class FakeLayout:
         _check_op(idname)
         if "icon" in k:
             _check_icon(k["icon"])
-        return OpProps(idname)
+        op = OpProps(idname)
+        CALLS.append((idname, op))
+        return op
 
     def operator_menu_enum(self, idname, prop, *a, **k):
         _check_op(idname)
@@ -238,9 +244,32 @@ class _Self:
         return attr.__get__(self) if hasattr(attr, "__get__") and callable(attr) else attr
 
 
+def remembered_prop_errors(module_prefix):
+    """Props set by some buttons but left unset by other buttons of the same operator.
+
+    In the UI, unset operator props reuse their last value unless they are SKIP_SAVE, so such a
+    button silently acts with whatever the other button set last."""
+    by_op = {}
+    for idname, op in CALLS:
+        by_op.setdefault(idname, []).append(op.__dict__.get("_set", set()))
+    errs = []
+    for idname, sets in by_op.items():
+        if len(sets) < 2:
+            continue
+        mod, _, name = idname.partition(".")
+        props = getattr(getattr(bpy.ops, mod), name).get_rna_type().properties
+        varying = set().union(*sets) - set.intersection(*sets)
+        for p in sorted(varying):
+            if p in props and not props[p].is_skip_save:
+                errs.append(f"{idname}: '{p}' is set by some buttons but not others; "
+                            f"add options={{'SKIP_SAVE'}} or set it everywhere")
+    return errs
+
+
 def check_module(module):
     """Run all draw code of `module` in a few modes. Returns list of error strings."""
     errors = []
+    CALLS.clear()
     ob, arm, cam, light = _setup_scene()
     contexts = [("mesh", {}), ("armature", {"object": arm, "active_object": arm}),
                 ("camera", {"object": cam, "active_object": cam}),
@@ -275,4 +304,7 @@ def check_module(module):
                 break
         if not ran:
             pass  # poll false in every context we can fake (e.g. needs edit mode); skipped
+    # Only judge this add-on's own operators (calls to native ops are fine).
+    own = {i for i, _ in CALLS if i.split(".")[0] == module.rsplit(".", 1)[-1]}
+    errors += [e for e in remembered_prop_errors(module) if e.split(":")[0] in own]
     return errors

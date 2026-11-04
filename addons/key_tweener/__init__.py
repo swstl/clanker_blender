@@ -242,7 +242,7 @@ class _SliderBase:
     tool = ""
 
     factor: bpy.props.FloatProperty(name="Factor", default=0.0, min=-1.0, max=1.0,
-                                    subtype='FACTOR', description="-100% .. +100%")
+                                    subtype='FACTOR', description="-100% .. +100%", options={'SKIP_SAVE'})
     mode: bpy.props.EnumProperty(name="Keys", items=_mode_items)
 
     def execute(self, context):
