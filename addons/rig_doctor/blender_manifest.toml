@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "rig_doctor"
+version = "1.0.0"
+name = "Rig Doctor"
+tagline = "Find and fix broken drivers and constraints in the whole file"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
+tags = ["Rigging", "Animation"]

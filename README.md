@@ -25,7 +25,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (80)
+## Add-ons (81)
 
 ### Animation
 
@@ -49,6 +49,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 
 | Add-on | What it does |
 |---|---|
+| Rig Doctor | File-wide scan for broken drivers (missing targets, bad paths, syntax/eval errors, needs Auto Run) and constraints (missing targets/subtargets, zero influence); retarget A→B, swap data-path prefixes, bulk mute/remove. N > Rig, Drivers editor. |
 | Custom Property Manager | Batch add custom properties (type, default, min/max, tooltip, overridable) to selected objects, data or pose bones; rename or remove across the whole file; select objects having a property/value. N > Edit. |
 | Weight Layers | Non-destructive weight painting layers per vertex group (Mix/Add/Subtract/Multiply/Max/Min, opacity, toggle), auto-composite, flatten, mirror layer. Properties > Data, or N > Weights in Weight Paint. |
 | Weight Tools | Mirror all L/R vertex groups, remove empty/non-bone groups, one-click game-ready cleanup (clean, limit 4, normalize), select unweighted/over-influenced verts, brush weight presets. N > Weights. |
