@@ -34,6 +34,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Version Snapshots | Timed timestamped backups in `_versions/` next to the .blend, keep last N, named milestones, restore from 3D View > N > View. |
 | Camera Manager | All cameras in one list, one-click switch/look-through, next/prev, per-camera resolution (portrait + landscape in one file), bind to marker, camera from view. 3D View > N > View. |
 | Collection Tools | Move selection to new collection named after active, isolate/show all, sort A-Z, remove empty, select contents, instance at cursor. Outliner right-click > Collection Tools. |
+| Batch Export | Export each object, hierarchy or collection to its own FBX/glTF/OBJ/USD file with Unity/Unreal/Godot presets, origin reset and separate animation files. 3D View > N > Export. |
 
 ## Development
 
