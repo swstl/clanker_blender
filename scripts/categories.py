@@ -13,7 +13,7 @@ CATEGORIES = {
                             "Camera Manager", "Light Manager", "Turntable"],
     "Scene, Files & Export": ["Batch Export", "Randomizer", "Scene Cleanup", "Collection Tools", "Project Files",
                               "Version Snapshots", "Asset Helper", "Paste Reference"],
-    "Viewport & UI": ["Saved Views", "Display Pie", "Pie Builder", "Heavy Object Finder"],
+    "Viewport & UI": ["Saved Views", "Cursor Tools", "Display Pie", "Pie Builder", "Heavy Object Finder"],
     "Video & 2D": ["VSE Tools", "GP Timing"],
     "System & Development": ["Script Watcher", "Keymap Tools", "Preferences Snapshot"],
 }

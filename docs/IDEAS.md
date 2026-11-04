@@ -39,7 +39,7 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 35 | Render presets draft/preview/final | Render | done (render_queue) |
 | 36 | Camera manager | Camera | done (camera_manager) |
 | 39 | Heavy object finder / viewport stats | Scene | done (heavy_finder) |
-| 40 | Operator history panel | UI | todo |
+| 40 | Operator history panel | UI | skipped (native F3 recent + Repeat History) |
 | 41 | Texture auto-reload when edited externally | Material | todo |
 | 42 | Shape key L/R split, empty key cleanup | Animation | todo |
 | 43 | Quick lattice around selection | Modeling | todo |
@@ -64,3 +64,4 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 62 | Dimensions overlay | 3D View | todo |
 | 63 | Display toggles pie | 3D View | todo |
 | 64 | Color management quick switch | Render | done (display_pie) |
+| 65 | 3D cursor history/bookmarks/snap with rotation | 3D View | todo |
