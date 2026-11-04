@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "motion_trail"
+version = "1.0.0"
+name = "Motion Trail"
+tagline = "Editable motion paths for objects and pose bones in the viewport"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.4.0"
+tags = ["Animation", "3D View"]

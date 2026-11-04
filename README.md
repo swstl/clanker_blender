@@ -62,6 +62,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Saved Views | Viewport bookmarks stored in the .blend: Ctrl+Alt+Shift+1-9 save, Ctrl+Alt+1-9 recall, named list, camera from a saved view. N > View. |
 | Light Manager | All lights + emissive meshes in one list with solo, visibility, color, power; Kelvin presets, aim at cursor/active, place at distance, exposure x0.5/x2, HDRI strength and rotation. N > Light. |
 | UV Tools | Seams by angle/sharp, batch unwrap selected objects with equal texel density, texel density measure/set/copy, checker material toggle (restores originals), straighten to grid, select flipped, UV map sync across objects. UV Editor N > UV Tools. |
+| Motion Trail | Editable motion paths for objects and pose bones: drag keys in the viewport, Ctrl+click path to add a key, X to delete; fading trail with frame ticks. N > Animation. |
 
 ## Development
 
