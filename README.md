@@ -75,6 +75,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | VSE Tools | Ripple delete (Shift+Delete), ripple trim to playhead (Alt+[ / Alt+]), insert/remove gap, batch blend/opacity/volume, frame-rate check, channel mute — 5.3-style ripple editing for 5.2 LTS. Sequencer Strip > Ripple. |
 | Physics Helpers | Drop/settle objects with a temporary rigid body sim (cleans up after itself) or raycast drop to surface; quick cloth with presets, pin group from selection, hook, collision, apply/shape key at frame. N > Physics. |
 | Keymap Tools | Find shortcut conflicts across user + add-on keymaps (report in a text block) and export a searchable HTML keymap cheat sheet. Help menu. |
+| Sculpt Masks | Mask / face sets ↔ vertex groups, mask from color attribute, stored named masks with replace/add/subtract/intersect, quick invert/clear/smooth. Sculpt Mode N > Sculpt. |
 
 ## Development
 

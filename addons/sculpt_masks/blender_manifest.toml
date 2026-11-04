@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "sculpt_masks"
+version = "1.0.0"
+name = "Sculpt Masks"
+tagline = "Convert masks, face sets and vertex groups and store named masks"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Sculpt", "Mesh"]
