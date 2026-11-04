@@ -398,7 +398,8 @@ class PT_OT_key_all(_PoseOp, bpy.types.Operator):
     bl_label = "Key Whole Character"
     bl_description = "Keyframe every bone's transforms and custom properties at the current frame"
 
-    visual: bpy.props.BoolProperty(name="Visual", description="Key the visual result of constraints")
+    visual: bpy.props.BoolProperty(name="Visual", description="Key the visual result of constraints",
+                                    options={'SKIP_SAVE'})
 
     def execute(self, context):
         key_whole_character(context.object, context.scene.frame_current, self.visual)

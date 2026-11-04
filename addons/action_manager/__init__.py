@@ -208,7 +208,7 @@ class ACTION_MANAGER_OT_new(_ObOp, bpy.types.Operator):
     bl_idname = "action_manager.new"
     bl_label = "New Action"
     bl_description = "Create a new empty action (or duplicate the current one) and assign it"
-    duplicate: BoolProperty()
+    duplicate: BoolProperty(options={'SKIP_SAVE'})
 
     def execute(self, context):
         ob = context.active_object
@@ -289,7 +289,7 @@ class ACTION_MANAGER_OT_push_nla(_ObOp, bpy.types.Operator):
     bl_idname = "action_manager.push_nla"
     bl_label = "Push Down"
     bl_description = "Push the current action onto a new NLA track (stash: muted track, keep it active)"
-    stash: BoolProperty()
+    stash: BoolProperty(options={'SKIP_SAVE'})
 
     @classmethod
     def poll(cls, context):

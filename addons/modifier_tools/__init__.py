@@ -194,7 +194,7 @@ class MT_OT_select_by_type(bpy.types.Operator):
     bl_options = {'REGISTER', 'UNDO'}
 
     mod_type: bpy.props.StringProperty(default='ALL')
-    name: bpy.props.StringProperty(description="Select only this object")
+    name: bpy.props.StringProperty(description="Select only this object", options={'SKIP_SAVE'})
 
     def execute(self, context):
         hits = [o for o in context.view_layer.objects

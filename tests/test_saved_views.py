@@ -38,3 +38,9 @@ def test_camera_from_view():
     assert cam.data.lens == 85
     # Camera sits view_distance behind the pivot along the view's +Z.
     assert (cam.location - __import__("mathutils").Vector((1, 2, 3))).length > 11.9
+
+
+def test_recall_props_skip_save():
+    # List button sets name, hotkeys set slot: a remembered slot would override the clicked name.
+    props = bpy.ops.saved_views.recall.get_rna_type().properties
+    assert props['slot'].is_skip_save and props['name'].is_skip_save

@@ -80,7 +80,7 @@ class HF_OT_tame(bpy.types.Operator):
         ('MODS_ON', "Modifiers On in Viewport", ""),
         ('SUBD_LOW', "Subdivision Viewport Level 0", "Keep render levels"),
     ])
-    use_list: bpy.props.BoolProperty(name="Top of List", default=False,
+    use_list: bpy.props.BoolProperty(name="Top of List", default=False, options={'SKIP_SAVE'},
                                      description="Apply to the top N heaviest objects instead of the selection")
 
     def execute(self, context):

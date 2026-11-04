@@ -61,8 +61,8 @@ class SV_OT_recall(bpy.types.Operator):
     bl_label = "Go to View"
     bl_description = "Jump to this bookmarked viewport angle"
 
-    name: bpy.props.StringProperty()
-    slot: bpy.props.IntProperty(default=0)
+    name: bpy.props.StringProperty(options={'SKIP_SAVE'})
+    slot: bpy.props.IntProperty(default=0, options={'SKIP_SAVE'})
 
     @classmethod
     def poll(cls, context):

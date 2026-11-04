@@ -32,3 +32,8 @@ def test_tame_top_list():
     bpy.ops.heavy_finder.tame(action='MODS_OFF', use_list=True)
     assert not ob.modifiers[0].show_viewport
     assert ob.modifiers[0].show_render
+
+
+def test_tame_use_list_skip_save():
+    # Grid buttons leave use_list unset; it must not stick after "Bounds"/"Mods Off" (Top of List).
+    assert bpy.ops.heavy_finder.tame.get_rna_type().properties['use_list'].is_skip_save
