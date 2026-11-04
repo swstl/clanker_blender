@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "render_notify"
+version = "1.0.0"
+name = "Render Notify"
+tagline = "Desktop notification and sound when a render finishes or fails"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Render"]
+
+[permissions]
+files = "Runs the system notification command (notify-send / osascript / PowerShell)"
