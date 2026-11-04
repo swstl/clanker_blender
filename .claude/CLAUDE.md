@@ -12,4 +12,4 @@ straight to `main`.
 - .claude/notes/errors.md: fixed errors and gotchas
 - docs/ADDON_GUIDE.md: add-on conventions + Blender 5.x API gotchas
 - docs/IDEAS.md: backlog of QoL ideas with status
-- .claude/notes/decisions.md: unfinished work + README generation
+- .claude/notes/decisions.md: shipping workflow, agent workflow, README generation
