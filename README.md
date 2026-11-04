@@ -39,6 +39,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Weight Tools | Mirror all L/R vertex groups, remove empty/non-bone groups, one-click game-ready cleanup (clean, limit 4, normalize), select unweighted/over-influenced verts, brush weight presets. N > Weights. |
 | Origin & Align | Set origins to any bounding-box point, cursor, selection (from Edit Mode) or face normal without moving geometry; align, distribute, drop to floor, stack. N > Align, or Alt+Shift+O pie. |
 | Scene Cleanup | Merge .001 duplicate materials/node groups/images, remove unused/empty material slots, rename data to object, recursive purge, select objects with bad scale/no material/empty mesh. N > Cleanup. |
+| Apply Modifiers Keep Shape Keys | Apply Subdivision/Mirror/Solidify/Bevel... on meshes with shape keys, keeping key settings and drivers. Object > Apply, or button in Modifiers tab. |
 
 ## Development
 
