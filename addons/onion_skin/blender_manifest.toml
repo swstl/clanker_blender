@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "onion_skin"
+version = "1.0.0"
+name = "Mesh Onion Skin"
+tagline = "Ghost past and future poses of animated meshes in the viewport"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.4.0"
+tags = ["Animation", "3D View"]
