@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "quick_retarget"
+version = "1.0.0"
+name = "Quick Retarget"
+tagline = "Retarget animation between armatures with auto bone mapping"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.4.0"
+tags = ["Animation", "Rigging"]
+
+[permissions]
+files = "Save and load bone map presets as JSON"
