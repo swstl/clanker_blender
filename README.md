@@ -67,6 +67,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Bake Helper | One-click Cycles PBR baking (color, roughness, metallic, normal, AO, emission, ORM...) per object, atlas or high-to-low, auto image nodes + full restore, baked material. N > Bake or Properties > Render. |
 | Batch Material Edit | Set/multiply/add Principled inputs (roughness, metallic, IOR, alpha, emission…) and backface culling / render method across selected or all materials, skipping texture-linked inputs; sync viewport colors from base color. N > Material. |
 | Render Border from Selection | Fit the render region to selected objects from the camera (with padding), or follow them every frame for animated crops. View > View Regions, Properties > Output. |
+| Turntable | Camera framed on the selection with a seamless 360° loop (camera orbit or objects spin), elevation, margin, lens. Add > Camera > Add Turntable. |
 
 ## Development
 
