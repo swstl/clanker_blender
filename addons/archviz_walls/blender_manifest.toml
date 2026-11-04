@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "archviz_walls"
+version = "1.0.0"
+name = "Archviz Walls"
+tagline = "Live walls, slabs and door/window cuts from a floor plan"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "5.2.0"
+tags = ["Modeling", "Geometry Nodes", "Add Mesh"]

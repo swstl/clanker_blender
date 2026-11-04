@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (71)
+## Add-ons (72)
 
 ### Animation
 
@@ -62,6 +62,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Group Under Empty | Maya-style transform groups: Ctrl+Alt+P parents the selection under an empty (bottom/center/cursor/active pivot, keeps world transforms and nested hierarchies), Shift+Alt+P ungroups, select whole group. Object > Parent. |
 | Curve Tools | Live Geometry Nodes objects-along-curve (count/spacing/corners, upright/tangent, random pick, jitter, realize) and sagging cables between objects or verts with hooks, end caps and bundles. N > Edit, Add > Curve. |
 | Print Split | Cut models into watertight parts with a movable plane, add peg/hole connectors with real-mm tolerance, check print-bed fit (with 90° turns) and non-manifold edges. N > Print. |
+| Archviz Walls | Live walls (mitred corners, inside/center/outside), floor and ceiling slabs from a floor-plan mesh or curve via Geometry Nodes; door/window cutters snapped to walls; apply to plain mesh. N > Archviz. |
 | Quick Boolean | Ctrl+Shift+Numpad -/+/*// = Difference/Union/Intersect/Slice; cutters become wire, render-hidden, parented and collected in 'Cutters'; apply all + delete cutters. Object > Quick Boolean. |
 | Quick Lattice | Fit a lattice around selected objects or Edit Mode vertices (auto vertex group), edit it, then apply-and-delete or remove. Right-click menu. |
 | Edge Weights Pie | Ctrl+Alt+E pie in Edit Mesh: exact bevel weight / crease values (0.25–1), mark/clear sharp and seam, bevel+sharp combo. |
