@@ -97,4 +97,4 @@ Superhive/Gumroad best-sellers, extensions.blender.org. Status: `todo`, `wip`, `
 | 95 | Hair mirror (Curves) + hair cards | Hair | todo |
 | 96 | Light link matrix | Lighting | todo |
 | 97 | Grease Pencil drawing guides (perspective) | Grease Pencil | todo |
-| 98 | Grease Pencil line cleanup | Grease Pencil | todo |
+| 98 | Grease Pencil line cleanup | Grease Pencil | done (gp_guides) |

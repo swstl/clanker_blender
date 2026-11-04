@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "gp_guides"
+version = "1.0.0"
+name = "GP Guides"
+tagline = "Perspective, parallel, grid and radial guides for Grease Pencil"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.3.0"
+tags = ["Grease Pencil", "Paint"]
