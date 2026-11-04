@@ -85,18 +85,26 @@ def prune():
             pass
 
 
-_last = [0.0]
+# is_dirty stays True after a copy-save, so without this an idle unsaved file would be
+# snapshotted every interval and the identical copies would prune the real history.
+# ponytail: edits that never touch the depsgraph (e.g. text editor only) don't count as changes.
+_changed = [False]
+
+
+@persistent
+def _on_change(*_):
+    _changed[0] = True
 
 
 def _timer():
     p = _prefs()
-    if p.enabled and bpy.data.filepath and bpy.data.is_dirty:
+    if p.enabled and bpy.data.filepath and bpy.data.is_dirty and _changed[0]:
         mode = bpy.context.mode if hasattr(bpy.context, "mode") else "OBJECT"
         # Saving mid-sculpt/paint stroke can stall; wait for object/edit-free moments.
         if mode in {'OBJECT', 'POSE', 'EDIT_MESH', 'EDIT_ARMATURE'}:
             try:
                 snapshot()
-                _last[0] = time.time()
+                _changed[0] = False
             except Exception as e:
                 print("Version Snapshots:", e)
     return max(60.0, p.interval_minutes * 60.0)
@@ -122,7 +130,8 @@ class VS_OT_snapshot(bpy.types.Operator):
     bl_label = "Save Snapshot"
     bl_description = "Save a timestamped copy of this file to the versions folder (optionally with a note)"
 
-    note: bpy.props.StringProperty(name="Note", description="Named snapshots are kept forever")
+    note: bpy.props.StringProperty(name="Note", description="Named snapshots are kept forever",
+                                   options={'SKIP_SAVE'})
 
     @classmethod
     def poll(cls, context):
@@ -197,6 +206,7 @@ def register():
     for c in _classes:
         bpy.utils.register_class(c)
     bpy.types.TOPBAR_MT_file.append(file_menu)
+    bpy.app.handlers.depsgraph_update_post.append(_on_change)
     if not bpy.app.background:
         bpy.app.timers.register(_timer, first_interval=60, persistent=True)
 
@@ -204,6 +214,8 @@ def register():
 def unregister():
     if bpy.app.timers.is_registered(_timer):
         bpy.app.timers.unregister(_timer)
+    if _on_change in bpy.app.handlers.depsgraph_update_post:
+        bpy.app.handlers.depsgraph_update_post.remove(_on_change)
     bpy.types.TOPBAR_MT_file.remove(file_menu)
     for c in reversed(_classes):
         bpy.utils.unregister_class(c)

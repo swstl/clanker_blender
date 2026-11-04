@@ -60,3 +60,4 @@
 - Geometry-nodes modifier inputs (5.2): `md.properties.inputs.<socket id>.value`, not IDProperties.
 - `wm.keyconfigs.default` is empty in `--background`; read default keys via `blender_default.generate_keymaps()` to check conflicts.
 - GN modifier inputs set from Python (`md.properties.inputs.<id>.value`) need `ob.update_tag()` to re-evaluate (5.2).
+- Operator properties remember their last value in the UI (not in `bpy.ops` calls from tests). Give props that a button/hotkey may leave unset `options={'SKIP_SAVE'}` or reset them in `invoke`.

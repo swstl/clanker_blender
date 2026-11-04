@@ -54,9 +54,13 @@ def run_target(path):
             del sys.modules[name]  # drop stale submodules so edits in them are picked up
         bpy.ops.preferences.addon_enable(module=mod)
         return True, f"Reloaded {mod}"
-    except Exception:
+    except (Exception, SystemExit):  # sys.exit() in a watched script must not quit Blender
         traceback.print_exc()
         return False, traceback.format_exc().strip().splitlines()[-1]
+
+
+def watching():
+    return bpy.app.timers.is_registered(_tick)
 
 
 def _tick():
@@ -93,7 +97,7 @@ class SW_OT_toggle(bpy.types.Operator):
 
     def execute(self, context):
         s = _settings()
-        if s.active:
+        if watching():  # not s.active: it is saved in the .blend while the timer is not
             s.active = False
             if bpy.app.timers.is_registered(_tick):
                 bpy.app.timers.unregister(_tick)
@@ -118,8 +122,9 @@ class SW_PT_panel(bpy.types.Panel):
         col = self.layout.column()
         col.prop(s, "path", text="")
         col.prop(s, "interval")
-        col.operator("script_watcher.toggle", text="Stop" if s.active else "Watch",
-                     icon='PAUSE' if s.active else 'PLAY', depress=s.active)
+        on = watching()
+        col.operator("script_watcher.toggle", text="Stop" if on else "Watch",
+                     icon='PAUSE' if on else 'PLAY', depress=on)
         if s.last_result:
             row = col.row()
             row.alert = s.last_result.startswith("ERROR")

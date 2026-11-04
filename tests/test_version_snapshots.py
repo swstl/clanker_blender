@@ -29,3 +29,19 @@ def test_snapshot_and_prune():
         assert os.path.dirname(named) == os.path.join(d, "_versions")
     finally:
         bpy.ops.wm.read_homefile(use_empty=True)
+
+
+def test_timer_waits_for_new_changes():
+    # is_dirty stays True after a copy-save: only a depsgraph change may trigger the next snapshot
+    d = tempfile.mkdtemp()
+    bpy.ops.wm.save_as_mainfile(filepath=os.path.join(d, "idle.blend"), copy=False)
+    try:
+        m._changed[0] = False
+        m._timer()
+        assert m.list_versions() == []
+        ob = bpy.data.objects.new("vs_probe", None)
+        bpy.context.scene.collection.objects.link(ob)
+        bpy.context.view_layer.update()
+        assert m._changed[0]
+    finally:
+        bpy.ops.wm.read_homefile(use_empty=True)

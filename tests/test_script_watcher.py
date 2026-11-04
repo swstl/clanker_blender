@@ -26,8 +26,17 @@ def test_runs_file_on_change():
     os.utime(p, (time.time() + 10,) * 2)
     m._tick()
     assert s.last_result.startswith("ERROR") and "boom" in s.last_result
+    open(p, "w").write("import sys\nsys.exit(3)\n")
+    os.utime(p, (time.time() + 15,) * 2)
+    m._tick()  # must not quit Blender
+    assert s.last_result.startswith("ERROR")
     bpy.ops.script_watcher.toggle()
-    assert not s.active
+    assert not s.active and not m.watching()
+    s.active = True  # as loaded from a .blend saved while watching: no timer behind it
+    bpy.ops.script_watcher.toggle()
+    assert s.active and m.watching()
+    bpy.ops.script_watcher.toggle()
+    assert not s.active and not m.watching()
 
 
 def test_module_for_folder_finds_addon():

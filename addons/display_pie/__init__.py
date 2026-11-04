@@ -61,7 +61,7 @@ class DP_OT_view_transform(bpy.types.Operator):
     bl_description = "Switch Color Management view transform (AgX, Standard, Khronos PBR Neutral, Filmic, False Color)"
     bl_options = {'REGISTER', 'UNDO'}
 
-    name: bpy.props.StringProperty(description="Set this transform; empty = next one")
+    name: bpy.props.StringProperty(description="Set this transform; empty = next one", options={'SKIP_SAVE'})
 
     def execute(self, context):
         vs = context.scene.view_settings

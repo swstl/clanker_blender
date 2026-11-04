@@ -314,7 +314,8 @@ class NT_OT_frame(_Tidy, bpy.types.Operator):
     bl_idname = "node_tidy.frame"
     bl_label = "Frame Selected"
     bl_description = "Put selected nodes in a new pastel frame labeled after the active node or your text"
-    label: bpy.props.StringProperty(name="Label", description="Empty: use the active node's name")
+    label: bpy.props.StringProperty(name="Label", description="Empty: use the active node's name",
+                                    options={'SKIP_SAVE'})
 
     def execute(self, context):
         nodes = _selected(context, frames=True)

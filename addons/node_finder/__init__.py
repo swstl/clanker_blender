@@ -297,12 +297,19 @@ def jump(context, item):
                 sp.path.pop()
             for tree, gn in chain[1:]:
                 sp.path.append(tree, node=gn)
-            region = next(rg for rg in area.regions if rg.type == 'WINDOW')
-            if node:
-                with bpy.context.temp_override(window=win, area=area, region=region):
-                    bpy.ops.node.view_selected()
-        except (ReferenceError, RuntimeError, StopIteration):
+            if node:  # node bounds exist only once the editor drew this tree: frame after a redraw
+                area.tag_redraw()
+                bpy.app.timers.register(frame, first_interval=0.1)
+        except (ReferenceError, RuntimeError):
             pass  # area closed meanwhile
+
+    def frame():
+        try:
+            region = next(rg for rg in area.regions if rg.type == 'WINDOW')
+            with bpy.context.temp_override(window=win, area=area, region=region):
+                bpy.ops.node.view_selected()
+        except (ReferenceError, RuntimeError, StopIteration):
+            pass
 
     bpy.app.timers.register(finish, first_interval=0.05)
     return None

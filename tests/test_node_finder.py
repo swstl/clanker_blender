@@ -214,7 +214,9 @@ def test_jump_in_node_editor():
             with bpy.context.temp_override(window=win, area=area):
                 assert m.jump(bpy.context, s.results[0]) is None
             assert sp.tree_type == kind
-            pending.pop()()  # background never refreshes the editor: finish falls back to pinning
+            pending.pop(0)()  # background never refreshes the editor: finish falls back to pinning
+            assert len(pending) == 1  # framing waits for a redraw (node bounds)
+            pending.pop()()
             assert [p.node_tree.name for p in sp.path] == path, [p.node_tree.name for p in sp.path]
     finally:
         bpy.app.timers.register = register

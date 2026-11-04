@@ -140,3 +140,9 @@ def test_keymap_pref_toggles():
     assert not m._keymaps
     prefs.use_keymap = True
     assert len(m._keymaps) == 2
+
+
+def test_pie_buttons_do_not_inherit_last_axes():
+    # "Origin to Center" sets no axes: they must not keep z='MIN' from a previous "Bottom" click
+    props = bpy.ops.origin_align.origin_bounds.get_rna_type().properties
+    assert all(props[a].is_skip_save for a in "xyz")

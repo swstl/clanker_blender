@@ -125,9 +125,10 @@ class OA_OT_origin_bounds(bpy.types.Operator):
     bl_description = ("Move the origin of selected objects to a point on their local bounding box "
                       "without moving geometry")
     bl_options = {'REGISTER', 'UNDO'}
-    x: EnumProperty(name="X", items=SIDES, default='CENTER')
-    y: EnumProperty(name="Y", items=SIDES, default='CENTER')
-    z: EnumProperty(name="Z", items=SIDES, default='CENTER')
+    # SKIP_SAVE: UI buttons only set some axes; the rest must not inherit last-used values
+    x: EnumProperty(name="X", items=SIDES, default='CENTER', options={'SKIP_SAVE'})
+    y: EnumProperty(name="Y", items=SIDES, default='CENTER', options={'SKIP_SAVE'})
+    z: EnumProperty(name="Z", items=SIDES, default='CENTER', options={'SKIP_SAVE'})
 
     @classmethod
     def poll(cls, context):

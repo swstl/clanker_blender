@@ -365,6 +365,9 @@ class RQ_OT_run(bpy.types.Operator):
         for i in self.todo:
             jobs[i].status = 'QUEUED'
         _state.update(cancel=False, done=0, total=len(self.todo))
+        # start now: with proc still None until the first tick, Run could be clicked twice
+        self.current = self.todo.pop(0)
+        _state["proc"] = start_job(jobs[self.current], self.load_path)
         wm = context.window_manager
         self.timer = wm.event_timer_add(0.5, window=context.window)
         wm.modal_handler_add(self)
@@ -404,6 +407,12 @@ class RQ_OT_run(bpy.types.Operator):
         _state["proc"] = None
         _redraw()
         return {'FINISHED'}
+
+    def cancel(self, context):
+        # Blender drops the modal handler on file load / window close: kill the render, or
+        # _state["proc"] stays set and the queue UI is stuck on "Rendering" for good.
+        _kill()
+        context.window_manager.event_timer_remove(self.timer)
 
 
 class RQ_OT_cancel(bpy.types.Operator):
