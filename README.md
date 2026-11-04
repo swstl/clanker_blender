@@ -44,6 +44,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Project Files | External files report (missing in red), collect outside files into textures/ sounds/ … with relative paths, one-click project folders + render output path. File > Project Files. |
 | Mesh Check | Counts n-gons, tris, non-manifold, loose geometry, zero-area faces, overlapping verts, flipped normals and poles; one click to select or fix each. N > Edit. |
 | Edge Weights Pie | Ctrl+Alt+E pie in Edit Mesh: exact bevel weight / crease values (0.25–1), mark/clear sharp and seam, bevel+sharp combo. |
+| Texture Set Loader | Pick a folder or files of PBR textures and build one Principled material per set (ORM packing, DirectX normals, displacement, box projection, assign or mark as asset). File > Import. |
 
 ## Development
 

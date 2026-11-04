@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "texture_sets"
+version = "1.0.0"
+name = "Texture Set Loader"
+tagline = "Build Principled materials from PBR texture folders in one click"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Material", "Import-Export", "Node"]
+
+[permissions]
+files = "Read texture images from disk"
