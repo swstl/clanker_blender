@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "selection_sets"
+version = "1.0.0"
+name = "Object Selection Sets"
+tagline = "Named object selection sets saved in the file"
+maintainer = "swstl"
+type = "add-on"
+license = ["SPDX:GPL-3.0-or-later"]
+blender_version_min = "4.2.0"
+tags = ["Object", "3D View"]
