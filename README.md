@@ -24,7 +24,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (66)
+## Add-ons (67)
 
 ### Animation
 
@@ -95,6 +95,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Add-on | What it does |
 |---|---|
 | Render Queue | Queue render jobs (per camera/marker, overrides, path tokens), render in background Blender processes or export a shell script; Draft/Preview/Final presets. Properties > Output. |
+| Product Stage | One click: curved cyclorama backdrop, key/fill/rim area lights (power scales with size) and a framed camera around the selection; optional shadow catcher; rebuild or remove. N > Light. |
 | Render Notify | Desktop notification + sound when a render finishes (or is cancelled). |
 | Render Passes to Files | One click wires every enabled render pass (AOVs, Cryptomatte) per view layer to a multilayer EXR or per-pass files, re-run safe, optional denoise, pass toggle grid. Properties > View Layer. |
 | Render Border from Selection | Fit the render region to selected objects from the camera (with padding), or follow them every frame for animated crops. View > View Regions, Properties > Output. |
@@ -127,7 +128,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Pie Builder | Build your own pie menus in Preferences: 8 slots of operator + properties + icon + label, hotkey per pie in any editor, no code. Preferences > Add-ons > Pie Builder. |
 | Heavy Object Finder | Ranks visible objects by triangles after modifiers; one-click bounds/wire display or heavy modifiers off in viewport. 3D View > N > View. |
 
-### Video & 2D
+### Video, 2D & Motion Graphics
 
 | Add-on | What it does |
 |---|---|
