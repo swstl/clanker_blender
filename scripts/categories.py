@@ -11,7 +11,7 @@ CATEGORIES = {
                              "Texture Auto Reload", "Node Finder", "Node Tidy"],
     "Rendering & Cameras": ["Render Queue", "Render Notify", "Render Passes to Files", "Render Border from Selection",
                             "Camera Manager", "Light Manager", "Turntable"],
-    "Scene, Files & Export": ["Batch Export", "Scene Cleanup", "Collection Tools", "Project Files",
+    "Scene, Files & Export": ["Batch Export", "Randomizer", "Scene Cleanup", "Collection Tools", "Project Files",
                               "Version Snapshots", "Asset Helper", "Paste Reference"],
     "Viewport & UI": ["Saved Views", "Display Pie", "Pie Builder", "Heavy Object Finder"],
     "Video & 2D": ["VSE Tools", "GP Timing"],
