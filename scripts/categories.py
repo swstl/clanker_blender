@@ -8,7 +8,7 @@ CATEGORIES = {
                       "Dimensions Overlay"],
     "Sculpting & Physics": ["Sculpt Layers", "Hair Tools", "Sculpt Masks", "Remesh Tools", "Physics Helpers"],
     "Materials & Textures": ["Paint Saver", "Texture Set Loader", "Image Palette", "Texture Proxies", "Material Swatches", "Batch Material Edit", "Bake Helper",
-                             "Texture Auto Reload", "Node Finder", "Node Tidy"],
+                             "Texture Auto Reload", "Node Finder", "Node Tidy", "Node Previews"],
     "Rendering & Cameras": ["Render Queue", "Render Preflight", "HDRI Browser", "Light Link Matrix", "Product Stage", "View Layer Matrix", "Render Notify", "Render Passes to Files", "Render Border from Selection",
                             "Camera Manager", "Light Manager", "Turntable"],
     "Scene, Files & Export": ["Batch Export", "Export Preflight", "Batch Import", "Game Ready", "Randomizer", "Attribute Cleanup", "Scene Cleanup", "Collection Tools", "Project Files",

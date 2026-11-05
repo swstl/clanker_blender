@@ -25,7 +25,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 `./scripts/build.sh` writes one `.zip` per add-on to `dist/`. Drag a zip into Blender or use
 *Install from Disk*.
 
-## Add-ons (90)
+## Add-ons (91)
 
 ### Animation
 
@@ -103,6 +103,7 @@ point it at this repo's `addons/` folder, then enable the add-ons you want.
 | Texture Auto Reload | Watches image files and reloads them when saved in Photoshop/Krita/Substance; never discards unsaved paint. Image > Auto Reload. |
 | Node Finder | File-wide node search (materials, worlds, GN, compositor, nested groups) with jump-to, where-used, missing images, node group swap and unused-node cleanup. Node Editor N > Find. |
 | Node Tidy | Straighten links, align/distribute, reroute chain straighten/remove/merge, quick pastel frames, grid snap in any node editor. Node > Tidy, N > Node, Shift+Alt+Q pie. |
+| Node Previews | Live preview above every shader node in one click (header button), auto-preview for newly added nodes |
 
 ### Rendering & Cameras
 
